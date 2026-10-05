@@ -1,0 +1,4 @@
+interface:
+  display_name: "MEDS Suite"
+  short_description: "Planeje e revise avaliações MEDS em português"
+  default_prompt: "Use $meds-suite para planejar ou revisar a avaliação do meu artefato DSR."
