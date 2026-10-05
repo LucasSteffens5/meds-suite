@@ -5,9 +5,6 @@ Síntese original de Venable, J., Pries-Heje, J., & Baskerville, R. (2016).
 of Information Systems, 25(1), 77–89.
 DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
 
-Os localizadores indicam páginas impressas e páginas do PDF consultado de 14
-páginas, cuja primeira página é a capa bibliográfica. Verificar o título e a
-paginação se outra edição for usada.
 
 ## Dois eixos e uma trajetória
 
