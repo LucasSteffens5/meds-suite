@@ -11,30 +11,46 @@ Leia a [referência MEDS](../../references/meds.md) e use o
 
 ## Condução
 
-1. **Contexto.** Identifique o problema, a finalidade do artefato, sua natureza
-   técnica ou sociotécnica, o estágio do projeto e os recursos/restrições conhecidos.
-   Pergunte somente pelo que muda a próxima escolha ou o essencial para cumprir o MEDS corretamente. Se faltarem dados, exija-os e em caso não seja disponibilizado, produza
-   um plano parcial e deixe explícitas as pendências; não presuma  nada  especialmente acesso a usuários.
+1. **Contexto.** Identifique o problema e a finalidade do artefato; se é produto ou
+   processo, técnico ou sociotécnico, crítico ou não crítico para segurança; o
+   estágio do projeto; os destinatários da evidência; e os recursos, riscos e
+   restrições conhecidos. Pergunte somente o que muda a próxima escolha ou é
+   essencial para aplicar MEDS. Se faltar informação, solicite-a; se não for
+   fornecida, produza um plano parcial e deixe a pendência explícita. Não presuma
+   especialmente acesso a usuários.
 2. **Objetivos da avaliação.** Caracterize o que será avaliado e por quê. Considere
    utilidade do artefato, rigor necessário, eficiência, redução de incertezas/riscos
    e ética. Separe esses objetivos da finalidade da solução. Identifique as
-   necessidades do pesquisador e dos demais destinatários da evidência.
+   necessidades do pesquisador e dos demais destinatários da evidência e como os
+   recursos da avaliação se equilibram com os recursos das demais atividades DSR.
 3. **Estratégia.** Consulte [FEDS](../../references/feds.md). Proponha uma estratégia
-   ou combinação justificada pelos objetivos, riscos e recursos. Esboce a trajetória
-   dos episódios, distinguindo finalidade formativa/somativa e ambiente
-   artificial/naturalístico. Se os dados não sustentarem uma escolha, registre
-   alternativas e a informação necessária para decidir.
+   ou combinação justificada pelos objetivos, riscos, recursos, acesso e necessidades
+   de evidência. Esboce a trajetória dos episódios, distinguindo finalidade
+   formativa/somativa, ambiente artificial/naturalístico e momento relativo ao
+   desenvolvimento. Justifique a finalidade pelo uso pretendido da evidência e o
+   ambiente pelas condições reais de usuários, sistema e problema/tarefa; não os
+   deduza da cronologia ou do nome do método. Se os dados não sustentarem uma
+   escolha, registre alternativas e a informação necessária para decidir.
 4. **Propriedades.** Identifique propriedades ligadas à finalidade do artefato.
-   Priorize com MuSCoW e justifique as escolhas. Prefira um conjunto manejável;
-   a recomendação de até cinco propriedades não é um limite obrigatório. Registre
-   como cada propriedade poderia ser observada; métricas e limiares desconhecidos
-   permanecem pendentes. Procure propriedades que possam ser avaliadas juntas.
+   Priorize com MuSCoW e justifique as escolhas. Considere separar componentes
+   quando tiverem riscos e contextos de uso distintos; eles podem justificar
+   estratégias FEDS diferentes. Prefira um conjunto manejável; a recomendação de
+   até cinco propriedades não é um limite. Registre como cada propriedade poderia
+   ser observada; métricas e limiares desconhecidos permanecem pendentes. Procure
+   propriedades que possam ser avaliadas juntas.
 5. **Episódios.** Planeje os episódios na maturidade adequada ao projeto, um por vez.
-   Relacione cada um aos objetivos e propriedades, identifique seu quadrante e
-   compare métodos candidatos usando DSREMSF e suas condições de escolha. Descreva
-   justificativa, escopo, recursos, evidência esperada e limitações. Evite detalhar
-   prematuramente episódios distantes. Para protocolos de execução, indique a
-   necessidade de literatura própria do método, que esta suíte não fornece.
+   Relacione cada um aos objetivos e propriedades e registre sua classificação
+   principal para consultar DSREMSF, conforme a convenção descrita em [FEDS](../../references/feds.md).
+   Indique usos complementares da evidência e condições parcialmente reais, quando
+   pertinentes. Compare um ou mais métodos candidatos usando suas condições e os
+   recursos disponíveis. Examine cedo os riscos técnicos e humanos prioritários,
+   antes de comprometer recursos em uma abordagem inviável. Descreva justificativa,
+   escopo, evidência esperada, responsáveis previstos quando conhecidos e limites
+   das conclusões. Uma avaliação formativa deve fornecer informação suficiente
+   para a próxima decisão; uma somativa deve
+   atender às necessidades de rigor de seus destinatários. Evite detalhar
+   prematuramente episódios distantes. Protocolos de execução exigem literatura
+   própria do método, que esta suíte não fornece.
 6. **Consolidar.** Registre escolhas como propostas até haver aceitação documentada.
    Quando houver uma decisão metodológica necessária, apresente a proposta concreta
    e obtenha a escolha do pesquisador. Reutilize aceitação existente e não crie

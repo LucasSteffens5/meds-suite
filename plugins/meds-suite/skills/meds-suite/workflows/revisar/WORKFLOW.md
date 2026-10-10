@@ -13,21 +13,35 @@ Se o plano estiver ausente, solicite seu caminho ou conteúdo.
 
 ## Análise
 
-- **Contexto e objetivos:** a finalidade do artefato está clara? Os objetivos da
-  avaliação atendem a essa finalidade e aos destinatários da evidência? Quais
-  recursos e necessidades de rigor foram informados, e quais estão desconhecidos?
-- **Estratégia:** a trajetória responde aos riscos e aos recursos? Há justificativa
-  para ambientes artificiais/naturalísticos e finalidades formativas/somativas?
-  Considere estratégias combinadas sem exigir todas as quatro combinações.
+- **Contexto e objetivos:** a finalidade e o tipo de artefato (produto/processo,
+  técnico/sociotécnico) estão claros? Sua criticidade de segurança foi considerada?
+  Os objetivos da avaliação atendem à finalidade e aos destinatários da evidência?
+  O equilíbrio entre recursos de avaliação e das demais atividades DSR está
+  justificado? Quais riscos, recursos e necessidades de rigor estão desconhecidos?
+- **Estratégia:** a trajetória responde aos riscos, recursos, acesso e necessidades
+  de evidência? A finalidade formativa/somativa está justificada pelo uso da evidência,
+  independentemente do momento relativo ao desenvolvimento? O ambiente está
+  justificado pelas condições de usuários, sistema e problema/tarefa reais, sem
+  deduzir classificação da cronologia ou do nome do método?
+  Os riscos técnicos e humanos prioritários têm avaliação formativa oportuna?
+  Componentes com contextos distintos justificam estratégias próprias? Considere
+  combinações sem exigir todas as quatro combinações.
 - **Propriedades:** a priorização MuSCoW está justificada? As propriedades têm
   relação com a finalidade e podem ser observadas? A cobertura é viável?
-- **Episódios:** objetivos, propriedades, quadrante, método e evidência esperada
-  são compatíveis? Dados de um teste artificial de funcionamento, por exemplo,
-  não bastam para demonstrar efetividade em uso real. A existência de uma
-  alternativa no DSREMSF não demonstra, sozinha, adequação ao caso.
+- **Episódios:** objetivos, propriedades, classificação principal, método e evidência
+  esperada são compatíveis? Usos complementares da evidência e condições parcialmente
+  reais estão explícitos quando pertinentes? A classificação principal segue a
+  convenção da suíte em [FEDS](../../references/feds.md), sem tratar os eixos como
+  categorias exclusivas? Momento e responsáveis previstos estão registrados ou
+  pendentes? Os métodos atendem às condições do DSREMSF e aos recursos
+  disponíveis? Um teste artificial de funcionamento não demonstra efetividade em
+  uso real. Avaliação formativa precisa apoiar a próxima decisão; avaliação
+  somativa precisa atender aos destinatários da evidência. Uma alternativa no
+  DSREMSF não demonstra, sozinha, adequação ao caso.
 - **Escopo e continuidade:** cortes de escopo explicam economia e consequências?
   Há decisões aceitas confundidas com propostas ou execução confundida com plano?
-  Uma mudança deixou episódios ou escolhas anteriores a revisar?
+  Os cortes preservam rigor suficiente, sobretudo em avaliações somativas? Uma
+  mudança deixou episódios ou escolhas anteriores a revisar?
 
 Fundamente as observações nos quatro passos sintetizados em [MEDS](../../references/meds.md):
 objetivos do programa, estratégia e trajetória, propriedades priorizadas e episódios

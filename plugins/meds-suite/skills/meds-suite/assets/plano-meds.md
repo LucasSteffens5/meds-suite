@@ -9,11 +9,13 @@ pendentes. Marque escolhas como propostas ou aceitas conforme o registro dispon�
 - Última atualização:
 - Etapa atual e próximo passo:
 - Problema da pesquisa e finalidade da solução:
-- Artefato a avaliar, natureza e estágio de desenvolvimento:
+- Artefato a avaliar; produto ou processo; técnico ou sociotécnico; crítico ou
+  não crítico para segurança; estágio de desenvolvimento:
 - Questão de pesquisa, se disponível:
 - Estágio do projeto DSR, se informado:
 - Destinatários da evidência e necessidades conhecidas:
-- Recursos, acesso, riscos e restrições informados:
+- Recursos destinados à avaliação e às demais atividades DSR; acesso, riscos e
+  restrições informados:
 
 ## 1. Objetivos da avaliação
 
@@ -26,6 +28,7 @@ da posição das linhas. Os IDs são uma convenção de organização desta suí
 ## 2. Estratégia e trajetória
 
 - Estratégia FEDS ou combinação proposta/aceita:
+- Componentes do artefato abrangidos por cada estratégia, quando aplicável:
 - Justificativa em função de objetivos, riscos e recursos:
 - Trajetória preliminar e posição dos episódios no projeto:
 - Informações necessárias para escolher ou refinar a estratégia:
@@ -40,15 +43,24 @@ da posição das linhas. Os IDs são uma convenção de organização desta suí
 Repita a ficha abaixo para cada episódio, com detalhe proporcional à maturidade
 do projeto. Não preencher resultados de avaliações ainda não realizadas.
 
+Para consultar DSREMSF, registre uma classificação principal pela finalidade
+predominante e pelo ambiente previsto, com justificativa e usos complementares
+da evidência. É uma convenção operacional da suíte: os eixos de [FEDS](../references/feds.md)
+são contínuos e independentes; finalidade não se deduz do momento ou do nome do método.
+
 ### E1 — <nome do episódio>
 
-- Finalidade e objetivos relacionados:
+- Finalidade principal (formativa/somativa), uso pretendido da evidência e objetivos relacionados:
+- Usos complementares da evidência, quando pertinentes:
 - Propriedades abrangidas:
 - Artefato/versão ou estágio a avaliar:
-- Formativa ou somativa; artificial ou naturalística; justificativa:
+- Ambiente principal (artificial/naturalístico); condições de usuários, sistema e
+  problema/tarefa; condições parcialmente reais e justificativa:
 - Métodos candidatos e condições pertinentes do DSREMSF:
-- Método proposto/aceito e justificativa:
-- Momento previsto e escopo do episódio:
+- Método(s) proposto(s)/aceito(s) e justificativa:
+- Momento previsto em relação à escolha, desenvolvimento ou implementação
+  (ex ante, intermediário ou ex post); escopo do episódio:
+- Responsáveis previstos, quando conhecidos, ou pendência:
 - Recursos e acesso necessários; disponibilidade conhecida ou pendente:
 - Evidência esperada e limitações das conclusões possíveis:
 - Sinergias com outras propriedades ou episódios:
