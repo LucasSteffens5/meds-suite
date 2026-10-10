@@ -29,8 +29,11 @@ Se o plano estiver ausente, solicite seu caminho ou conteúdo.
   Há decisões aceitas confundidas com propostas ou execução confundida com plano?
   Uma mudança deixou episódios ou escolhas anteriores a revisar?
 
-Use as seções 3.1–3.4 do artigo MEDS e as condições FEDS como fundamentos das
-observações. Diferencie recomendação da fonte, regra operacional desta suíte e
+Fundamente as observações nos quatro passos sintetizados em [MEDS](../../references/meds.md):
+objetivos do programa, estratégia e trajetória, propriedades priorizadas e episódios
+com métodos e escopo justificados. Para a estratégia, use as condições de risco,
+acesso e evidência pretendida sintetizadas em [FEDS](../../references/feds.md).
+Diferencie recomendação da fonte, regra operacional desta suíte e
 julgamento contextual da IA. Não imponha número fixo de episódios, tamanho de
 amostra ou limiar universal. Não simule parecer independente ou aprovação ética.
 

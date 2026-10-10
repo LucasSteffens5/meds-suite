@@ -109,9 +109,11 @@ não constituem avaliação científica da eficácia da suíte.
 
 A validação estrutural confirmou catálogo e manifesto JSON, versões consistentes,
 uma única skill, metadados de interface e 17 links locais resolvidos. O validador
-de `skill-creator` retornou `Skill is valid!`. A matriz DSREMSF foi conferida contra
-a Figura 2 do PDF MEDS consultado, incluindo as vinte posições e a repetição de
-Lab Experiment. `git diff --check` não apontou problemas de whitespace.
+de `skill-creator` retornou `Skill is valid!`. A matriz DSREMSF foi conferida com
+Baskerville, Pries-Heje e Venable (2026): cinco posições por quadrante, vinte no
+total, com Lab Experiment em dois quadrantes. Os métodos e suas condições de
+escolha constam da [referência MEDS](plugins/meds-suite/skills/meds-suite/references/meds.md#dsremsf-métodos-candidatos-por-quadrante).
+`git diff --check` não apontou problemas de whitespace.
 
 Uma nova execução efêmera do Codex CLI v0.160.0, com o modelo configurado no CLI
 (`gpt-6-luna`), exercitou os quatro pedidos sequencialmente. A skill foi carregada
@@ -142,9 +144,10 @@ desses casos fictícios, não garantia de comportamento em toda pesquisa.
 - [DSRM](plugins/meds-suite/skills/meds-suite/references/dsrm.md): Peffers et al.
   (2007), DOI 10.2753/MIS0742-1222240302.
 
-As referências são sínteses originais com seções e páginas dos PDFs consultados.
-Os artigos originais prevalecem na interpretação da metodologia e não são
-redistribuídos no pacote. Não há caminhos pessoais fixos nos recursos do plugin.
+As referências contêm sínteses originais do conhecimento necessário ao planejamento
+e à revisão, com atribuição bibliográfica e DOI. As explicações, matrizes e condições
+de escolha estão em Markdown e não exigem consulta aos PDFs. Os artigos não são
+redistribuídos no repositório nem no pacote. Não há caminhos pessoais fixos nos recursos do plugin.
 
 A [ARS-Codex](https://github.com/Imbad0202/academic-research-skills-codex) inspirou
 a organização em entrada única, fluxos e carregamento progressivo. O conteúdo,

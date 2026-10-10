@@ -4,7 +4,6 @@ Síntese original de Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026).
 *MEDS: Methodology for Evaluation in Design Science*. European Journal of
 Information Systems. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
 
-
 ## Processo e seus quatro passos
 
 MEDS organiza o programa de **avaliações** de um projeto DSR. Seus componentes
@@ -21,12 +20,21 @@ Os quatro passos são:
 As primeiras escolhas se beneficiam do planejamento antecipado. O detalhamento
 de um episódio pode ocorrer próximo de sua realização; objetivos e propriedades
 podem mudar durante o projeto. Não transformar os passos em fases irreversíveis.
+O esforço tende a crescer dos objetivos gerais ao planejamento e execução dos
+episódios: acrescentar objetivos ou propriedades amplia o trabalho necessário.
 
 ## Objetivos e propriedades
 
 Os objetivos da avaliação concernem ao programa; as propriedades concernem ao
-artefato, ao seu uso ou ao efeito desejado. Considerar segurança, ética, utilidade
-e rigor suficiente, equilibrando recursos e redução de riscos.
+artefato, ao seu uso ou ao efeito desejado. A prioridade é garantir segurança e
+condução ética; depois, avaliar a utilidade pretendida com rigor suficiente para os
+destinatários da evidência e equilibrar esse rigor com os recursos disponíveis.
+A redução de riscos e incertezas evita falhas e retrabalho.
+
+Identifique propriedades candidatas pela finalidade do artefato, usando listas
+existentes ou brainstorming. Exemplos são usabilidade, segurança, confiabilidade
+e desempenho; sua pertinência depende do caso. Uma propriedade possível não é,
+por isso, obrigatória: selecione pelo efeito prático ou questão de pesquisa.
 
 MuSCoW prioriza propriedades relevantes para a finalidade do artefato:
 
@@ -37,7 +45,7 @@ MuSCoW prioriza propriedades relevantes para a finalidade do artefato:
 | Could | Propriedades que poderiam ser avaliadas |
 | Would | Propriedades que seria desejável incluir também |
 
-Aqui se adota **Would**;. Evitar substituir esta classificação
+Aqui se adota **Would**. Evitar substituir esta classificação
 pelo MoSCoW habitual com Won't. A recomendação de selecionar até cinco propriedades
 é orientação de parcimônia, não limite universal.
 
@@ -47,9 +55,9 @@ Formativa/somativa descreve a finalidade da avaliação. Artificial/naturalísti
 descreve o ambiente. A estratégia FEDS orienta a trajetória; o quadrante caracteriza
 um episódio; o método descreve como obter evidência nesse episódio.
 
-Temos cinco posições por quadrante. Há vinte posições,
+Há cinco posições por quadrante. Há vinte posições,
 não vinte métodos distintos: experimento de laboratório aparece em dois quadrantes.
-Os rótulos originais são mantidos para facilitar a consulta da fonte.
+Os rótulos originais identificam os métodos na literatura.
 
 | Quadrante | Métodos candidatos |
 |---|---|
@@ -91,16 +99,24 @@ conclusões pretendidas, não apenas do nome do método.
 
 ## Short-scoping e sinergias
 
-Short-scoping ajusta o trabalho de avaliação ao efeito prático que precisa ser
-examinado e ao rigor requerido. Pode reduzir duplicação, reaproveitar definições
-do projeto e limitar medidas ou atividades ao necessário. Considerar também
-métodos e episódios que atendam a várias propriedades.
+Short-scoping ajusta o método ao trabalho necessário para examinar o efeito prático
+do artefato com o rigor requerido. Pode reaproveitar a definição do problema e o
+planejamento já feitos na DSR, dispensar análises ou teorização desnecessárias ao
+objetivo e limitar variáveis medidas ao efeito investigado. Reduzir participantes
+ou o escopo/realismo de uma tarefa é uma possibilidade condicionada à suficiência
+da evidência. É especialmente pertinente em avaliações formativas; em somativas,
+depende das exigências dos destinatários da evidência.
+
+Há duas sinergias: escolher um método que cubra vários objetivos/propriedades e
+planejar um episódio que reúna avaliações antes separadas. Um episódio formativo
+deve produzir a informação específica necessária para decidir como prosseguir,
+com rigor suficiente para confiar nessa decisão.
 
 Nesta suíte, uma proposta de corte explicita escopo original, alteração,
 justificativa, economia esperada, consequências para rigor/cobertura, riscos e
 decisão do pesquisador. Esse registro é uma convenção operacional da suíte.
 
 ## Limites da orientação
- MEDS complementa metodologias gerais de DSR;
+MEDS complementa metodologias gerais de DSR;
 não fornece um fluxo de escrita/publicação nem limiares universais de qualidade. Ganho de eficiência não autoriza
 presumir suficiência de rigor ou generalizar conclusões além da evidência prevista.
