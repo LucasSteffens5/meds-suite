@@ -7,15 +7,14 @@ Entrega: plano MEDS parcial ou completo, com escolhas justificadas, pendências 
 próximo passo, salvo no projeto da pesquisa conforme a regra de continuidade.
 
 Leia a [referência MEDS](../../references/meds.md) e use o
-[modelo do plano](../../assets/plano-meds.md). Para um caso existente, leia o plano
-antes de fazer perguntas. Aproveite informações e decisões já registradas.
+[modelo do plano](../../assets/plano-meds.md). Para casos novos sempre pergunte tudo que for pertinente ao projeto e as informações cruciais para executar MEDS. Para um caso existente, leia o plano antes de fazer perguntas. Aproveite informações e decisões já registradas e sempre lembre o usuário das decisões que ele já tomou.
 
 ## Condução
 
 1. **Contexto.** Identifique o problema, a finalidade do artefato, sua natureza
    técnica ou sociotécnica, o estágio do projeto e os recursos/restrições conhecidos.
-   Pergunte somente pelo que muda a próxima escolha. Se faltarem dados, produza
-   um plano parcial e deixe explícitas as pendências; não presuma acesso a usuários.
+   Pergunte somente pelo que muda a próxima escolha ou o essencial para cumprir o MEDS corretamente. Se faltarem dados, exija-os e em caso não seja disponibilizado, produza
+   um plano parcial e deixe explícitas as pendências; não presuma  nada  especialmente acesso a usuários.
 2. **Objetivos da avaliação.** Caracterize o que será avaliado e por quê. Considere
    utilidade do artefato, rigor necessário, eficiência, redução de incertezas/riscos
    e ética. Separe esses objetivos da finalidade da solução. Identifique as

@@ -2,7 +2,7 @@
 
 Síntese original de Venable, J., Pries-Heje, J., & Baskerville, R. (2016).
 *FEDS: a Framework for Evaluation in Design Science Research*. European Journal
-of Information Systems, 25(1), 77–89.
+of Information Systems.
 DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
 
 
@@ -13,7 +13,6 @@ DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
 **Artificial** usa situações controladas, representadas ou simuladas;
 **naturalística** busca examinar uso em contexto real. Os dois eixos são
 independentes. Uma trajetória combina episódios ao longo do projeto.
-Fonte: descrição do framework, pp. 80–81 (PDF 5–6).
 
 ## Estratégias arquetípicas
 
@@ -23,9 +22,6 @@ Fonte: descrição do framework, pp. 80–81 (PDF 5–6).
 | Human Risk & Effectiveness | Riscos sociais/de uso, acesso viável ao contexto real ou necessidade de evidência de efetividade em uso real | Avaliação formativa cedo, avançando para contexto naturalístico; avaliação somativa de efetividade |
 | Technical Risk & Efficacy | Riscos técnicos, contexto real muito custoso ou necessidade de isolar o efeito do artefato | Avaliações artificiais formativas, depois somativas; uso naturalístico posterior quando pertinente |
 | Purely Technical Artefact | Artefato sem aspectos sociais ou uso humano distante que torna avaliação naturalística irrelevante ao projeto | Ênfase em avaliações artificiais |
-
-Fonte: seção Evaluation strategies, pp. 81–82 (PDF 6–7); Tabela 1, p. 82
-(PDF 7); heurísticas de Step 2, p. 83 (PDF 8).
 
 As estratégias são protótipos, podem ser combinadas e revisitadas. A quantidade
 e a posição dos episódios nas ilustrações são indicativas, não obrigatórias.
@@ -37,8 +33,7 @@ o fato de o artefato ser software não implica que seja puramente técnico.
 Explique a relação entre contexto, estratégia proposta e trajetória de episódios.
 Quando faltarem informações, mantenha alternativas e pendências. Não use o nome
 de um método como se fosse estratégia. Não assuma que toda pesquisa precisa passar
-pelos quatro quadrantes. Fonte: pp. 81–84 (PDF 6–9), incluindo a orientação de
-iteração em Step 4.
+pelos quatro quadrantes.
 
 MEDS adota essa orientação de estratégia e acrescenta priorização de propriedades,
 seleção de métodos e ajuste de escopo. Consulte [MEDS](meds.md) para esses detalhes.

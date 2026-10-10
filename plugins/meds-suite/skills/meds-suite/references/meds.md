@@ -4,16 +4,12 @@ Síntese original de Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026).
 *MEDS: Methodology for Evaluation in Design Science*. European Journal of
 Information Systems. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
 
-Localizadores abaixo usam a paginação impressa no artigo e, entre parênteses,
-a página do PDF consultado de 19 páginas. A primeira página do PDF é uma capa
-bibliográfica. Outras edições podem ter deslocamentos diferentes. Consulte o
-PDF local pelo título quando precisar conferir uma passagem.
 
 ## Processo e seus quatro passos
 
-MEDS organiza o programa de avaliações de um projeto DSR. Seus componentes
+MEDS organiza o programa de **avaliações** de um projeto DSR. Seus componentes
 auxiliam escolhas proporcionais ao rigor requerido e aos recursos disponíveis.
-Os quatro passos são descritos na seção 3 e na Figura 1, p. 3 (PDF 4):
+Os quatro passos são:
 
 | Passo | Pergunta central | Orientação |
 |---|---|---|
@@ -25,14 +21,12 @@ Os quatro passos são descritos na seção 3 e na Figura 1, p. 3 (PDF 4):
 As primeiras escolhas se beneficiam do planejamento antecipado. O detalhamento
 de um episódio pode ocorrer próximo de sua realização; objetivos e propriedades
 podem mudar durante o projeto. Não transformar os passos em fases irreversíveis.
-Fonte: seções 3.1–3.4, pp. 4–6 (PDF 5–7), e seção 5, p. 13 (PDF 14).
 
 ## Objetivos e propriedades
 
 Os objetivos da avaliação concernem ao programa; as propriedades concernem ao
 artefato, ao seu uso ou ao efeito desejado. Considerar segurança, ética, utilidade
-e rigor suficiente, equilibrando recursos e redução de riscos. Fonte: seção 3.1,
-p. 4 (PDF 5).
+e rigor suficiente, equilibrando recursos e redução de riscos.
 
 MuSCoW prioriza propriedades relevantes para a finalidade do artefato:
 
@@ -43,10 +37,9 @@ MuSCoW prioriza propriedades relevantes para a finalidade do artefato:
 | Could | Propriedades que poderiam ser avaliadas |
 | Would | Propriedades que seria desejável incluir também |
 
-Aqui se adota **Would**, conforme o corpo da seção 3.3, p. 6 (PDF 7); o resumo
-do artigo emprega uma expansão diferente. Evitar substituir esta classificação
+Aqui se adota **Would**;. Evitar substituir esta classificação
 pelo MoSCoW habitual com Won't. A recomendação de selecionar até cinco propriedades
-é orientação de parcimônia, não limite universal. Fonte: seção 3.3, pp. 5–6 (PDF 6–7).
+é orientação de parcimônia, não limite universal.
 
 ## DSREMSF: métodos candidatos por quadrante
 
@@ -54,7 +47,7 @@ Formativa/somativa descreve a finalidade da avaliação. Artificial/naturalísti
 descreve o ambiente. A estratégia FEDS orienta a trajetória; o quadrante caracteriza
 um episódio; o método descreve como obter evidência nesse episódio.
 
-A Figura 2, p. 7 (PDF 8), apresenta cinco posições por quadrante. Há vinte posições,
+Temos cinco posições por quadrante. Há vinte posições,
 não vinte métodos distintos: experimento de laboratório aparece em dois quadrantes.
 Os rótulos originais são mantidos para facilitar a consulta da fonte.
 
@@ -67,8 +60,7 @@ Os rótulos originais são mantidos para facilitar a consulta da fonte.
 
 ### Condições para orientar a escolha
 
-Síntese das regras tecnológicas da seção 3.4.2, p. 8 (PDF 9). São recomendações
-condicionais de escolha, não garantias de adequação ou protocolos de execução.
+Recomendações condicionais de escolha, não garantias de adequação ou protocolos de execução.
 
 | Quadrante | Método | Condição relevante |
 |---|---|---|
@@ -93,8 +85,7 @@ condicionais de escolha, não garantias de adequação ou protocolos de execuç�
 | Somativa naturalística | Field Study or Case Study | Acesso à implementação e necessidade de evidência abrangendo a organização |
 | Somativa naturalística | Ethnography | Acesso à implementação, uso prolongado/conhecimento profundo e alta exigência de rigor |
 
-A posição na matriz admite adaptações entre finalidade formativa e somativa,
-como indica a Figura 2. Uma adaptação exige justificar finalidade, ambiente e
+A posição na matriz admite adaptações entre finalidade formativa e somativa. Uma adaptação exige justificar finalidade, ambiente e
 evidência; não basta trocar o rótulo. O rigor depende do desenho concreto e das
 conclusões pretendidas, não apenas do nome do método.
 
@@ -103,17 +94,13 @@ conclusões pretendidas, não apenas do nome do método.
 Short-scoping ajusta o trabalho de avaliação ao efeito prático que precisa ser
 examinado e ao rigor requerido. Pode reduzir duplicação, reaproveitar definições
 do projeto e limitar medidas ou atividades ao necessário. Considerar também
-métodos e episódios que atendam a várias propriedades. Fonte: seção 3.4.3,
-p. 9 (PDF 10).
+métodos e episódios que atendam a várias propriedades.
 
 Nesta suíte, uma proposta de corte explicita escopo original, alteração,
 justificativa, economia esperada, consequências para rigor/cobertura, riscos e
 decisão do pesquisador. Esse registro é uma convenção operacional da suíte.
 
 ## Limites da orientação
-
-O artigo remete o desenho detalhado e a execução à literatura de cada método
-(fim da seção 3.4.2, p. 8 / PDF 9). MEDS complementa metodologias gerais de DSR;
-não fornece um fluxo de escrita/publicação nem limiares universais de qualidade.
-Fontes: seções 5.4 e 6, pp. 14–16 (PDF 15–17). Ganho de eficiência não autoriza
+ MEDS complementa metodologias gerais de DSR;
+não fornece um fluxo de escrita/publicação nem limiares universais de qualidade. Ganho de eficiência não autoriza
 presumir suficiência de rigor ou generalizar conclusões além da evidência prevista.
