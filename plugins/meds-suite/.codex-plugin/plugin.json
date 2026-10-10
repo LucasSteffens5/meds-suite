@@ -1,0 +1,11 @@
+{
+  "name": "meds-suite",
+  "version": "0.1.0",
+  "description": "Planejamento e revisão de programas de avaliação MEDS",
+  "author": {
+    "name": "LucasSteffens5"
+  },
+  "repository": "https://github.com/LucasSteffens5/meds-suite",
+  "license": "Apache-2.0",
+  "skills": "./skills/"
+}
