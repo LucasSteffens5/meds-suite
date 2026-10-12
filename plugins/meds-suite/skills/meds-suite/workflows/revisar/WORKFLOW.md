@@ -72,3 +72,6 @@ exigem justificativa e aceitação correspondente; esta conferência contextual 
 é uma garantia automática de fidelidade semântica.
 Uma alternativa criada durante a revisão continua proposta. Não registre
 um parecer como prova de validade científica, eficácia ou execução.
+Termine a revisão no chat com a legenda fixa definida na entrada da skill. Em
+revisão sem edição, deixe o plano intacto. Se uma edição for autorizada, termine
+o arquivo com uma única cópia da legenda.

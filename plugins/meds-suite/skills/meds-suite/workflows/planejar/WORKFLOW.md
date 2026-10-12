@@ -91,3 +91,7 @@ Salve o plano com as informações disponíveis; ele pode permanecer parcial.
 Na resposta, mostre o arquivo, o que foi planejado, o que continua proposto ou
 pendente e a próxima pergunta ou ação útil. Um plano completo descreve avaliações
 futuras: não indica que foram executadas ou que o artefato foi validado.
+Termine toda resposta deste fluxo com a legenda fixa definida na entrada da skill.
+O modelo de plano contém a mesma legenda para arquivos novos; ao atualizar um
+plano, mantenha uma única cópia no fim. A legenda acompanha inclusive perguntas,
+planos parciais e avisos de que não foi possível salvar.

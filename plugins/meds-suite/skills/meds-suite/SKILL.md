@@ -2,7 +2,7 @@
 name: meds-suite
 description: Planeje, retome ou revise programas de avaliação de artefatos em Design Science Research usando MEDS, FEDS, MuSCoW e DSREMSF. Use para objetivos, estratégia, propriedades e episódios de avaliação; execução de métodos e revisão editorial de artigos ficam fora deste fluxo.
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # MEDS Suite
@@ -49,6 +49,24 @@ O diretório `agents/` contém metadados de interface; esta versão usa um coord
   do pacote não demonstram eficácia nem validade científica da suíte ou da pesquisa.
 - Preserve a distinção entre objetivos do artefato, objetivos da avaliação,
   estratégia, quadrante de um episódio e método. As etapas podem ser revisitadas.
+
+## Saídas e legenda obrigatória
+
+Toda mensagem dirigida ao pesquisador termina com a legenda fixa abaixo, inclusive
+perguntas, respostas curtas, retomadas, revisões e avisos de que um arquivo não pôde
+ser salvo. Não omita nem resuma a legenda quando alguns termos não aparecerem.
+Use português por padrão; se a conversa pedir outro idioma, traduza as definições
+e mantenha as siglas e identificadores.
+
+Toda nota ou plano MEDS criado ou atualizado também termina com uma única cópia da
+legenda. Ao atualizar um arquivo que já tenha legenda, mantenha uma só cópia no fim.
+Em revisão somente no chat, acrescente a legenda à resposta e preserve o arquivo.
+Se o material usar um identificador ou sigla com outro significado, explique esse
+uso junto da primeira ocorrência e mantenha a legenda padrão.
+
+**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.
+
+**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar).
 
 ## Continuidade
 

@@ -1,6 +1,6 @@
 # MEDS Suite para Codex
 
-Plugin `meds-suite` v0.1.1 com uma skill coordenadora para planejar, retomar e revisar
+Plugin `meds-suite` v0.1.2 com uma skill coordenadora para planejar, retomar e revisar
 programas de avaliação de artefatos em Design Science Research (DSR).
 O planejamento fica em um arquivo Markdown por caso.
 
@@ -32,6 +32,10 @@ necessária e mantém escolhas sem fundamento suficiente como pendências. O pla
 preserva restrições, a origem da aceitação e a aplicabilidade das decisões após
 mudanças de contexto. Planos antigos continuam utilizáveis. O modelo exportável
 identifica as fontes por título e DOI, sem caminhos da instalação.
+
+Na v0.1.2, respostas dirigidas ao pesquisador e planos MEDS terminam com uma
+legenda curta de identificadores e conceitos. Ao atualizar um plano, a suíte
+mantém uma única legenda no fim; uma revisão somente no chat preserva o arquivo.
 
 ## Instalação local
 
@@ -103,16 +107,17 @@ python3 -m unittest discover -s tests -v
 ```
 
 O validador lê manifestos, caminhos, versões, entrada única e links locais dos
-recursos e do README. Rejeita links locais e caminhos da instalação no modelo
-exportável. Retorna código 0 para estrutura aprovada e 1 para falhas localizadas,
-sem editar arquivos. Seu leitor de links cobre a sintaxe simples usada no pacote;
-não verifica âncoras, disponibilidade de URLs externas nem conteúdo metodológico.
+recursos e do README. Confere a legenda no modelo e nos materiais de primeiro
+contato; rejeita links locais e caminhos da instalação no modelo exportável. Retorna
+código 0 para estrutura aprovada e 1 para falhas localizadas, sem editar arquivos.
+Seu leitor de links cobre a sintaxe simples usada no pacote; não verifica âncoras,
+disponibilidade de URLs externas nem conteúdo metodológico.
 
 ### Comportamento em sessões novas
 
-O [protocolo dos cenários](tests/behavior/README.md) usa casos fictícios e registra
-entradas, respostas humanas previstas e critérios de avaliação. Inclui dez cenários
-e três repetições para retomada, mudança de contexto e revisão sem edição: dezesseis
+O [protocolo dos cenários](tests/behavior/README.md) usa casos de teste e registra
+entradas, respostas humanas previstas e critérios de avaliação. Inclui onze cenários
+e três repetições para retomada, mudança de contexto e revisão sem edição: dezessete
 sessões por versão. Não envie os critérios esperados ao modelo avaliado.
 
 O executor requer Codex CLI autenticado. Usa o modelo configurado no ambiente,
@@ -120,7 +125,7 @@ registra o modelo anunciado pelo CLI e cria sessões efêmeras em pastas separad
 Ele não instala o plugin nem muda a configuração do Codex.
 
 ```sh
-python3 scripts/run_behavior_checks.py --output /tmp/meds-v011-nova-execucao
+python3 scripts/run_behavior_checks.py --output /tmp/meds-v012-nova-execucao
 ```
 
 A pasta de saída deve ser nova e ficar fora do checkout. O executor grava prompts,

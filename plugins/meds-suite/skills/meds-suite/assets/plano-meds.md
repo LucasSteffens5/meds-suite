@@ -96,3 +96,9 @@ contextual; referências do plugin são identificadas por título e DOI.
 Indique artigos, seções/páginas e materiais fornecidos usados nas justificativas.
 As referências metodológicas do plugin estão disponíveis por título e DOI;
 registre aqui os localizadores relevantes, sem presumir leitura humana das fontes.
+
+## Legenda
+
+**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.
+
+**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar).
