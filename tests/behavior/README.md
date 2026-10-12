@@ -14,8 +14,10 @@ exercício; não representam decisões, participantes ou execução de uma pesqu
    `expected` e `human_reply` não são fornecidos ao modelo. Este protocolo verifica
    uma rodada de cada situação, não uma entrevista humana completa.
 4. Inspecione respostas e arquivos. Compare com os critérios de cada cenário e
-   registre evidência, problemas e limites. Os recibos não produzem automaticamente
-   um julgamento sobre correção metodológica.
+   registre evidência, problemas e limites. Verifique que toda resposta termina
+   com a legenda da skill e que cada plano criado ou atualizado termina com uma
+   única cópia; em revisão somente no chat, confirme que o arquivo permaneceu
+   inalterado. Os recibos não produzem automaticamente um julgamento metodológico.
 5. Corrija problemas observados e repita os cenários afetados. Não apresente resultados
    anteriores como novas execuções nem resultados dos casos como validade científica.
 
@@ -34,6 +36,7 @@ sessão não iniciar, registre falha de execução, não aprovação do cenário
 | Cenário | Rodadas por versão | Entrada e resposta humana disponível | Critério principal |
 |---|---|---|---|
 | incompleto | 1 | Protótipo e duas semanas; acesso desconhecido. Resposta futura sugerida permanece fora da primeira rodada | Perguntas pertinentes, sem inventar acesso ou aceitação |
+| planejamento-parcial | 1 | Protótipo, prazo, objetivo de melhorar buscas; critérios e acesso desconhecidos | Salvar plano parcial e terminar resposta/plano com uma única legenda |
 | revisao-sem-plano | 1 | Revisão solicitada; material ausente | Solicitar material mantendo o fluxo |
 | retomada | 3 | Aceitação no plano; três sessões de 40 minutos, limiar desconhecido | Preservar escolhas, restrição e limites |
 | mudanca | 3 | Acesso perdido, três dias; substituições ainda não aceitas | Histórico preservado e itens afetados a revisar |

@@ -10,6 +10,15 @@ from urllib.parse import unquote, urlsplit
 
 PLUGIN = Path("plugins/meds-suite")
 SKILL = PLUGIN / "skills/meds-suite"
+LEGEND = (
+    "**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; "
+    "E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, "
+    "não passos de MEDS.\n\n"
+    "**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em "
+    "ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória "
+    "das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: "
+    "Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar)."
+)
 # shortcut: cobre links inline e definições de referência usados neste pacote;
 # adotar um parser Markdown se os recursos passarem a usar sintaxe mais complexa.
 LINKS = re.compile(r"!?\[[^\]\n]*\]\(\s*(<[^>]+>|[^\s)]+)(?:\s+\"[^\"]*\")?\s*\)")
@@ -98,6 +107,8 @@ def validate(root):
     if (not isinstance(version, str) or not re.fullmatch(r"\d+\.\d+\.\d+", version)
             or versions != [version] or readme_versions != [version]):
         error(manifest_path, "versões do plugin, skill e apresentação no README devem coincidir")
+    if skill_text.count(LEGEND) != 1:
+        error(skill_path, "deve conter uma única legenda fixa para as respostas da suíte")
 
     skills = sorted((root / "plugins").rglob("SKILL.md"))
     if skills != [root / skill_path]:
@@ -125,6 +136,15 @@ def validate(root):
 
     template_path = SKILL / "assets/plano-meds.md"
     template = read(template_path)
+    tutorial_root = root / "docs/primeiro-contato"
+    if not tutorial_root.is_dir():
+        error("docs/primeiro-contato", "materiais didáticos ausentes")
+    documents = [root / template_path, *sorted(tutorial_root.rglob("*.md"))]
+    for path in documents:
+        relative = path.relative_to(root)
+        text = template if path == root / template_path else read(relative)
+        if text.count("## Legenda") != 1 or text.count(LEGEND) != 1 or not text.rstrip().endswith(LEGEND):
+            error(relative, "deve terminar com uma única cópia da legenda fixa")
     for target in link_targets(template):
         try:
             url = urlsplit(target)

@@ -19,7 +19,7 @@ class PackageTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        for directory in ("plugins", ".agents", "tests/behavior"):
+        for directory in ("plugins", ".agents", "tests/behavior", "docs/primeiro-contato"):
             shutil.copytree(ROOT / directory, self.root / directory)
         for filename in ("README.md", "LICENSE"):
             shutil.copy2(ROOT / filename, self.root / filename)
@@ -62,7 +62,7 @@ class PackageTests(unittest.TestCase):
             with self.subTest(path=path):
                 file = self.root / path
                 original = file.read_text()
-                file.write_text(original.replace("0.1.1", "9.9.9"), encoding="utf-8")
+                file.write_text(original.replace("0.1.2", "9.9.9"), encoding="utf-8")
                 self.assertTrue(validator.validate(self.root))
                 file.write_text(original, encoding="utf-8")
 
@@ -90,6 +90,16 @@ class PackageTests(unittest.TestCase):
         path = self.root / validator.SKILL / "assets/plano-meds.md"
         path.write_text(path.read_text() + "\n[FEDS](../references/feds.md)", encoding="utf-8")
         self.assertTrue(any("modelo exportável" in e for e in validator.validate(self.root)))
+
+    def test_legend_must_be_unique_and_final_in_deliverables(self):
+        for relative in (validator.SKILL / "assets/plano-meds.md",
+                         Path("docs/primeiro-contato/aulas/01-planejar.md")):
+            with self.subTest(path=relative):
+                path = self.root / relative
+                original = path.read_text(encoding="utf-8")
+                path.write_text(original + "\n\n## Nota após a legenda\n", encoding="utf-8")
+                self.assertTrue(any("legenda fixa" in e for e in validator.validate(self.root)))
+                path.write_text(original, encoding="utf-8")
 
     def test_exported_template_rejects_install_path_in_prose(self):
         path = self.root / validator.SKILL / "assets/plano-meds.md"

@@ -6,6 +6,12 @@
     "human_reply": "Caso prossiga a entrevista: utilidade significa encontrar documentos com menos dificuldade; ainda não confirmei usuários. Esta resposta não é fornecida na primeira rodada."
   },
   {
+    "id": "planejamento-parcial", "plan": null, "repetitions": 1, "read_only": false,
+    "prompt": "Planeje a avaliação de um organizador de documentos acadêmicos. Tenho um protótipo em desenvolvimento, duas semanas e ainda não confirmei acesso a estudantes. Quero melhorar a correção das buscas. Prepare um plano parcial em plano-meds.md, pergunte somente o necessário para a etapa atual e deixe estratégia, propriedades e episódios sem fundamento como pendentes.",
+    "expected": "Registrar apenas contexto e objetivos sustentados; manter lacunas como pendências; salvar plano parcial; resposta e plano terminam com uma única legenda; não inventar decisões nem resultados.",
+    "human_reply": "Se perguntado, ainda não tenho critérios de correção nem confirmei acesso. Esta resposta não é fornecida na primeira rodada."
+  },
+  {
     "id": "revisao-sem-plano", "plan": null, "repetitions": 1, "read_only": true,
     "prompt": "Revise a coerência do meu plano MEDS. Ainda não disponibilizei o arquivo nem seu conteúdo. Quero revisão, somente no chat.",
     "expected": "Solicitar plano ou caminho e manter revisão; não iniciar entrevista de planejamento nem criar arquivos.",
