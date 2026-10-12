@@ -34,6 +34,9 @@ A busca ignora maiúsculas e minúsculas e procura palavras em títulos e etique
 Os resultados esperados são critérios planejados para comparação, não resultados
 observados de uma execução.
 
+Na tabela, S1 identifica um cenário de busca e D1 identifica um documento. Os
+números organizam os itens; não indicam passos de MEDS.
+
 | Cenário | Consulta | IDs esperados | O que cobre |
 |---|---|---|---|
 | S1 | calendário | D1 | Palavra no título |
@@ -52,3 +55,9 @@ observados de uma execução.
 
 Os cenários ajudam a planejar uma verificação de correção. Cobrir alguns deles não
 demonstra correção geral nem utilidade em contexto real.
+
+## Legenda
+
+**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.
+
+**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar).

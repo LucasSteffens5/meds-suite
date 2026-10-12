@@ -43,3 +43,9 @@ Fontes: Baskerville, Pries-Heje e Venable (2026), *MEDS: Methodology for
 Evaluation in Design Science*, DOI 10.1080/0960085X.2026.2627280; Venable,
 Pries-Heje e Baskerville (2016), *FEDS: a Framework for Evaluation in Design
 Science Research*, DOI 10.1057/ejis.2014.36.
+
+## Legenda
+
+**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.
+
+**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar).

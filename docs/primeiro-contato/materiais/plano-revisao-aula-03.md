@@ -72,3 +72,9 @@ não há resultados registrados.
 A próxima etapa é revisar a relação entre objetivos, propriedades, episódios e
 conclusões. Os resultados esperados de S1–S6 estão na
 [ficha do organizador](ficha-caso.md).
+
+## Legenda
+
+**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.
+
+**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar).

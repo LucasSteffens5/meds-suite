@@ -21,6 +21,10 @@ O contexto ajuda a justificar as escolhas: risco de buscas incorretas, tempo
 disponível e acesso ainda não confirmado a estudantes. MEDS começa pelo programa
 de avaliações que esses fatores tornam viável.
 
+Os códigos apenas identificam itens do plano: O1 é um objetivo da avaliação,
+P1 uma propriedade do artefato e E1 um episódio planejado. Eles não são passos.
+Os passos MEDS são as quatro etapas apresentadas nesta aula.
+
 ## Passo 1 — Definir objetivos
 
 **O que aprender:** dizer que decisão a avaliação precisa apoiar.
@@ -122,3 +126,9 @@ metodológica MEDS. Compare as relações do seu plano com o
 [exemplo de referência](../referencias/plano-aula-01.md).
 
 **Próximo:** [aula 2 — retomar e adaptar](02-retomar.md).
+
+## Legenda
+
+**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.
+
+**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar).

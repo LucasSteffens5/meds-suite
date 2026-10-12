@@ -61,3 +61,9 @@ peça à suíte que compare o hash SHA-256 antes e depois da cópia. Hashes igua
 indicam que o conteúdo não mudou; essa conferência não avalia a qualidade do plano.
 
 [Voltar à trilha](README.md) · [Ver cobertura](cobertura.md)
+
+## Legenda
+
+**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.
+
+**Siglas:** MEDS = metodologia para organizar avaliações em DSR; DSR = pesquisa em ciência do design; DSRM = metodologia do projeto DSR; FEDS = estratégia e trajetória das avaliações; DSREMSF = seleção de métodos de avaliação; MuSCoW = prioridades: Must (precisa), Should (deveria), Could (poderia), Would (seria desejável avaliar).
