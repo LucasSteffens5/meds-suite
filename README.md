@@ -1,6 +1,6 @@
 # MEDS Suite para Codex
 
-Plugin `meds-suite` v0.1.0 com uma skill coordenadora para planejar, retomar e revisar
+Plugin `meds-suite` v0.1.1 com uma skill coordenadora para planejar, retomar e revisar
 programas de avaliação de artefatos em Design Science Research (DSR).
 O planejamento fica em um arquivo Markdown por caso.
 
@@ -26,6 +26,12 @@ mantêm uma única cópia no plugin; os metadados em `agents/` não criam subage
 O fluxo de planejamento organiza objetivos, estratégia FEDS, propriedades
 priorizadas por MuSCoW e episódios com métodos candidatos DSREMSF. As escolhas podem
 ser revisitadas. A revisão relaciona observações a seções e episódios concretos.
+
+Na v0.1.1, a entrevista aprofunda a etapa atual, explica por que uma informação é
+necessária e mantém escolhas sem fundamento suficiente como pendências. O plano
+preserva restrições, a origem da aceitação e a aplicabilidade das decisões após
+mudanças de contexto. Planos antigos continuam utilizáveis. O modelo exportável
+identifica as fontes por título e DOI, sem caminhos da instalação.
 
 ## Instalação local
 
@@ -86,26 +92,62 @@ Apresente a revisão na conversa, sem editar o plano.
 Para alterar o plano após a revisão, solicite os ajustes desejados. Também é
 possível informar outro caminho de saída ou pedir planejamento somente no chat.
 
-## Verificação de uso em uma nova conversa
+## Verificações de manutenção
 
-Após instalar, conferir os seguintes cenários em um projeto de teste separado:
+Os scripts abaixo usam Python 3.9 ou superior e somente a biblioteca padrão.
+São ferramentas de desenvolvimento fora do plugin; usar MEDS não depende deles.
 
-| Cenário | Comportamento esperado |
-|---|---|
-| Informações incompletas | Perguntar pelo essencial, sem inventar contexto, acesso ou resultados |
-| Plano parcial | Salvar o que já é conhecido e manter propostas e pendências identificadas |
-| Retomada | Ler o plano, preservar decisões aceitas e continuar do ponto registrado |
-| Episódio incompatível | Apontar o problema e a seção correspondente, sem alterar o arquivo em revisão |
+```sh
+python3 scripts/validate_package.py
+python3 -m unittest discover -s tests -v
+```
 
-Para o último cenário, use um plano que proponha provar benefício em uso real
-apenas por testes artificiais de funcionamento. A revisão deve reconhecer a lacuna
-entre a evidência prevista e a conclusão pretendida, sem exigir um método único.
+O validador lê manifestos, caminhos, versões, entrada única e links locais dos
+recursos e do README. Rejeita links locais e caminhos da instalação no modelo
+exportável. Retorna código 0 para estrutura aprovada e 1 para falhas localizadas,
+sem editar arquivos. Seu leitor de links cobre a sintaxe simples usada no pacote;
+não verifica âncoras, disponibilidade de URLs externas nem conteúdo metodológico.
 
-Registre versão do plugin, ambiente, entrada utilizada, arquivo antes/depois e
-comportamento observado. Esses exercícios verificam uso e coerência do fluxo;
-não constituem avaliação científica da eficácia da suíte.
+### Comportamento em sessões novas
 
-## Verificações realizadas em 2026-10-03
+O [protocolo dos cenários](tests/behavior/README.md) usa casos fictícios e registra
+entradas, respostas humanas previstas e critérios de avaliação. Inclui dez cenários
+e três repetições para retomada, mudança de contexto e revisão sem edição: dezesseis
+sessões por versão. Não envie os critérios esperados ao modelo avaliado.
+
+O executor requer Codex CLI autenticado. Usa o modelo configurado no ambiente,
+registra o modelo anunciado pelo CLI e cria sessões efêmeras em pastas separadas.
+Ele não instala o plugin nem muda a configuração do Codex.
+
+```sh
+python3 scripts/run_behavior_checks.py --output /tmp/meds-v011-nova-execucao
+```
+
+A pasta de saída deve ser nova e ficar fora do checkout. O executor grava prompts,
+respostas, transcrições, hashes dos arquivos antes/depois e recibos. Seus códigos
+de saída verificam execução e preservação em revisão; o julgamento metodológico
+permanece pendente de inspeção humana. Ele não atribui notas nem certifica planos.
+
+Separar três tipos de evidência: **estrutura do pacote**, **comportamento observado
+nos cenários** e **avaliação científica da eficácia**. As duas primeiras não
+substituem a terceira. A descoberta automática no seletor de uma nova conversa
+continua sendo uma verificação específica da instalação.
+
+### Execução comparativa em 2026-10-10 (v0.1.0 → v0.1.1)
+
+O [relatório com evidências](tests/behavior/resultados-2026-10-10.md) registra
+32 sessões novas do Codex CLI `0.160.0`, com `gpt-6.1-sol`: dezesseis por versão,
+incluindo as repetições previstas. As dezesseis sessões somente de leitura
+preservaram os arquivos por SHA-256. Nos oito planos salvos por cada versão,
+caminhos locais da skill apareceram em oito na v0.1.0 e em nenhum na v0.1.1.
+As decisões aceitas e os limites da evidência foram preservados nos casos inspecionados.
+
+Estrutura aprovada pelo validador, treze testes `unittest` aprovados e verificação
+da skill aprovada. O relatório identifica a inspeção feita pela IA implementadora;
+não apresenta parecer humano ou independente. Os recibos não atribuem aprovação
+metodológica. Descoberta do plugin instalado e eficácia científica não foram testadas.
+
+## Histórico: verificações realizadas em 2026-10-03 (v0.1.0)
 
 A validação estrutural confirmou catálogo e manifesto JSON, versões consistentes,
 uma única skill, metadados de interface e 17 links locais resolvidos. O validador
