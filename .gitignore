@@ -1,6 +1,8 @@
 /AGENTS.md
 /docs/
+!/docs/primeiro-contato/
 *.pdf
+*.tar.gz
 .DS_Store
 /casos/
 __pycache__/
