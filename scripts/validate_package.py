@@ -113,7 +113,8 @@ def validate(root):
     skills = sorted((root / "plugins").rglob("SKILL.md"))
     if skills != [root / skill_path]:
         error(PLUGIN, "deve existir somente a entrada skills/meds-suite/SKILL.md")
-    for required in ("agents/openai.yaml", "workflows/planejar/WORKFLOW.md",
+    for required in ("agents/openai.yaml", "workflows/tutorial/WORKFLOW.md",
+                     "workflows/planejar/WORKFLOW.md",
                      "workflows/revisar/WORKFLOW.md", "references/meds.md",
                      "references/feds.md", "references/dsrm.md", "assets/plano-meds.md"):
         if not (root / SKILL / required).is_file():
@@ -131,20 +132,18 @@ def validate(root):
             if (url.scheme and url.scheme != "file") or url.netloc or not url.path:
                 continue
             destination = (path.parent / unquote(url.path)).resolve()
+            if (relative.is_relative_to(PLUGIN)
+                    and not destination.is_relative_to((root / PLUGIN).resolve())):
+                error(relative, f"link local depende de arquivo fora do plugin instalado: {target}")
             if not destination.is_relative_to(root) or not destination.exists():
                 error(relative, f"link local ausente ou fora do pacote: {target}")
 
     template_path = SKILL / "assets/plano-meds.md"
     template = read(template_path)
-    tutorial_root = root / "docs/primeiro-contato"
-    if not tutorial_root.is_dir():
-        error("docs/primeiro-contato", "materiais didáticos ausentes")
-    documents = [root / template_path, *sorted(tutorial_root.rglob("*.md"))]
-    for path in documents:
-        relative = path.relative_to(root)
-        text = template if path == root / template_path else read(relative)
-        if text.count("## Legenda") != 1 or text.count(LEGEND) != 1 or not text.rstrip().endswith(LEGEND):
-            error(relative, "deve terminar com uma única cópia da legenda fixa")
+    if not (root / SKILL / "workflows/tutorial/WORKFLOW.md").is_file():
+        error(SKILL / "workflows/tutorial/WORKFLOW.md", "tutorial não está incluído no plugin instalado")
+    if template.count("## Legenda") != 1 or template.count(LEGEND) != 1 or not template.rstrip().endswith(LEGEND):
+        error(template_path, "deve terminar com uma única cópia da legenda fixa")
     for target in link_targets(template):
         try:
             url = urlsplit(target)

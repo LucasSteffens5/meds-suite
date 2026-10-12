@@ -19,8 +19,11 @@ class PackageTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        for directory in ("plugins", ".agents", "tests/behavior", "docs/primeiro-contato"):
+        for directory in ("plugins", ".agents", "tests/behavior"):
             shutil.copytree(ROOT / directory, self.root / directory)
+        tutorial_doc = self.root / "docs/primeiro-contato"
+        tutorial_doc.mkdir(parents=True)
+        shutil.copy2(ROOT / "docs/primeiro-contato/README.md", tutorial_doc / "README.md")
         for filename in ("README.md", "LICENSE"):
             shutil.copy2(ROOT / filename, self.root / filename)
 
@@ -62,11 +65,16 @@ class PackageTests(unittest.TestCase):
             with self.subTest(path=path):
                 file = self.root / path
                 original = file.read_text()
-                file.write_text(original.replace("0.1.2", "9.9.9"), encoding="utf-8")
+                file.write_text(original.replace("0.1.3", "9.9.9"), encoding="utf-8")
                 self.assertTrue(validator.validate(self.root))
                 file.write_text(original, encoding="utf-8")
 
     def test_duplicate_skill_and_missing_workflow(self):
+        tutorial = self.root / validator.SKILL / "workflows/tutorial/WORKFLOW.md"
+        content = tutorial.read_text(encoding="utf-8")
+        tutorial.unlink()
+        self.assertTrue(any("tutorial" in e for e in validator.validate(self.root)))
+        tutorial.write_text(content, encoding="utf-8")
         extra = self.root / validator.SKILL / "workflows/planejar/SKILL.md"
         extra.write_text("extra", encoding="utf-8")
         self.assertTrue(validator.validate(self.root))
@@ -86,14 +94,21 @@ class PackageTests(unittest.TestCase):
         path.write_text(original + "\n[x](arquivo%20com%20acento%20%C3%A1.md)", encoding="utf-8")
         self.assertEqual(validator.validate(self.root), [])
 
+    def test_plugin_resources_cannot_depend_on_checkout_docs(self):
+        tutorial = self.root / validator.SKILL / "workflows/tutorial/WORKFLOW.md"
+        original = tutorial.read_text(encoding="utf-8")
+        tutorial.write_text(original + "\n[material externo](../../../../../../docs/primeiro-contato/README.md)\n",
+                            encoding="utf-8")
+        self.assertTrue(any("fora do plugin instalado" in e
+                            for e in validator.validate(self.root)))
+
     def test_exported_template_rejects_even_existing_install_link(self):
         path = self.root / validator.SKILL / "assets/plano-meds.md"
         path.write_text(path.read_text() + "\n[FEDS](../references/feds.md)", encoding="utf-8")
         self.assertTrue(any("modelo exportável" in e for e in validator.validate(self.root)))
 
     def test_legend_must_be_unique_and_final_in_deliverables(self):
-        for relative in (validator.SKILL / "assets/plano-meds.md",
-                         Path("docs/primeiro-contato/aulas/01-planejar.md")):
+        for relative in (validator.SKILL / "assets/plano-meds.md",):
             with self.subTest(path=relative):
                 path = self.root / relative
                 original = path.read_text(encoding="utf-8")
