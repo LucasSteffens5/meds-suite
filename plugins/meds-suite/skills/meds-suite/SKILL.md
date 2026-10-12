@@ -1,8 +1,8 @@
 ---
 name: meds-suite
-description: Planeje, retome ou revise programas de avaliação de artefatos em Design Science Research usando MEDS, FEDS, MuSCoW e DSREMSF. Use para objetivos, estratégia, propriedades e episódios de avaliação; execução de métodos e revisão editorial de artigos ficam fora deste fluxo.
+description: Aprenda MEDS com um exemplo guiado ou planeje, retome e revise programas de avaliação de artefatos DSR usando FEDS, MuSCoW e DSREMSF. Execução de métodos e revisão editorial ficam fora deste fluxo.
 metadata:
-  version: "0.1.2"
+  version: "0.1.3"
 ---
 
 # MEDS Suite
@@ -15,6 +15,7 @@ idioma. Explique termos metodológicos na primeira ocorrência.
 
 | Pedido | Carregar |
 |---|---|
+| Aprender MEDS com o exemplo da suite ou continuar o tutorial | [Tutorial](workflows/tutorial/WORKFLOW.md) |
 | Iniciar, completar ou modificar o planejamento | [Planejar](workflows/planejar/WORKFLOW.md) |
 | Retomar um caso | Ler primeiro o plano salvo; continuar com Planejar na etapa pertinente |
 | Analisar coerência ou lacunas de um plano existente | [Revisar](workflows/revisar/WORKFLOW.md) |
@@ -27,6 +28,9 @@ Leia somente o fluxo selecionado e os recursos necessários à etapa atual.
 Localize primeiro a pasta da skill. Resolva cada link relativo a partir da pasta
 do arquivo que contém esse link, não do projeto da pesquisa. No plano salvo,
 identifique as referências do plugin por título e DOI, sem caminhos da instalação.
+Ao citar uma síntese ao pesquisador, informe seu título e tópico; não mostre
+caminhos ou links internos da instalação. Informe caminhos dos arquivos do projeto
+quando forem necessários para usar ou localizar uma entrega.
 O diretório `agents/` contém metadados de interface; esta versão usa um coordenador.
 
 ## Fundamento e autoridade

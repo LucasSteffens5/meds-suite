@@ -1,8 +1,22 @@
 # MEDS Suite para Codex
 
-Plugin `meds-suite` v0.1.2 com uma skill coordenadora para planejar, retomar e revisar
+Plugin `meds-suite` v0.1.3 com uma skill coordenadora para ensinar, planejar, retomar e revisar
 programas de avaliação de artefatos em Design Science Research (DSR).
 O planejamento fica em um arquivo Markdown por caso.
+
+## Primeiro uso no Codex
+
+Depois de instalar a suite, abra uma conversa do Codex na pasta onde deseja guardar
+o exemplo e envie:
+
+```text
+Use $meds-suite para me ensinar MEDS com um exemplo simples.
+```
+
+A suite apresenta um organizador fictício, explica uma etapa por vez e salva o
+plano em `casos/tutorial-meds/plano-meds.md`. Você pode parar e retomar em outra
+conversa com “Continue o tutorial MEDS”. Não precisa abrir este repositório,
+procurar fichas ou copiar materiais. O exemplo inteiro acompanha o plugin.
 
 ## Arquitetura
 
@@ -13,6 +27,7 @@ plugins/meds-suite/
   skills/meds-suite/
     SKILL.md                          Entrada e seleção do fluxo
     agents/openai.yaml                Metadados da interface
+    workflows/tutorial/WORKFLOW.md     Exemplo guiado autocontido
     workflows/planejar/WORKFLOW.md     Planejamento e retomada
     workflows/revisar/WORKFLOW.md      Revisão de coerência e lacunas
     references/                       MEDS, FEDS e contexto DSRM
@@ -63,38 +78,29 @@ codex plugin add meds-suite@meds-local
 A presença dos arquivos, sozinha, não comprova que o plugin foi instalado ou
 carregado em uma conversa. Registre a observação ao fazer essa verificação.
 
-## Uso
+## Uso em uma pesquisa
 
-### Planejar
-
-```text
-Use $meds-suite para planejar a avaliação do caso organizador-documentos.
-Meu artefato é um organizador de documentos para estudantes. Tenho um protótipo,
-duas semanas e ainda não confirmei acesso a usuários. Quero avaliar sua utilidade.
-Pergunte o que faltar e salve o plano parcial.
-```
-
-O caminho padrão será `casos/organizador-documentos/plano-meds.md` no projeto da
-pesquisa. O plano reúne contexto, quatro etapas MEDS, decisões, pendências e próximo
-passo. Propostas da IA não são registradas como aceitas sem confirmação disponível.
-
-### Retomar
+Para começar um caso próprio, use a suite na pasta do projeto da pesquisa:
 
 ```text
-Use $meds-suite para retomar casos/organizador-documentos/plano-meds.md.
-Leia o plano antes de perguntar e continue a partir das pendências registradas.
+Use $meds-suite para planejar a avaliação do meu artefato. Explique o que falta,
+faça uma pergunta de cada vez e salve um plano parcial.
 ```
 
-### Revisar
+O caminho padrão será `casos/<identificador>/plano-meds.md` no projeto da
+pesquisa. As propostas permanecem distintas das decisões aceitas e das avaliações
+que ainda não foram executadas.
+
+Para retomar ou revisar um plano existente:
 
 ```text
-Use $meds-suite para revisar casos/organizador-documentos/plano-meds.md.
-Verifique a coerência entre objetivos, estratégia, propriedades e episódios.
-Apresente a revisão na conversa, sem editar o plano.
+Use $meds-suite para retomar casos/<identificador>/plano-meds.md.
 ```
 
-Para alterar o plano após a revisão, solicite os ajustes desejados. Também é
-possível informar outro caminho de saída ou pedir planejamento somente no chat.
+```text
+Use $meds-suite para revisar casos/<identificador>/plano-meds.md.
+Apresente a análise no chat, sem editar o plano.
+```
 
 ## Verificações de manutenção
 
@@ -107,8 +113,8 @@ python3 -m unittest discover -s tests -v
 ```
 
 O validador lê manifestos, caminhos, versões, entrada única e links locais dos
-recursos e do README. Confere a legenda no modelo e nos materiais de primeiro
-contato; rejeita links locais e caminhos da instalação no modelo exportável. Retorna
+recursos e do README. Confere o tutorial empacotado, rejeita links de recursos para
+fora do plugin e verifica a legenda no modelo exportável. Retorna
 código 0 para estrutura aprovada e 1 para falhas localizadas, sem editar arquivos.
 Seu leitor de links cobre a sintaxe simples usada no pacote; não verifica âncoras,
 disponibilidade de URLs externas nem conteúdo metodológico.
@@ -123,6 +129,10 @@ sessões por versão. Não envie os critérios esperados ao modelo avaliado.
 O executor requer Codex CLI autenticado. Usa o modelo configurado no ambiente,
 registra o modelo anunciado pelo CLI e cria sessões efêmeras em pastas separadas.
 Ele não instala o plugin nem muda a configuração do Codex.
+
+A [execução do tutorial instalado em 2026-10-12](tests/behavior/resultado-tutorial-2026-10-12.md)
+registra o teste em pasta externa, a retomada em conversas novas e a preservação
+do plano durante revisão somente no chat.
 
 ```sh
 python3 scripts/run_behavior_checks.py --output /tmp/meds-v012-nova-execucao
