@@ -27,7 +27,8 @@ Se o plano estiver ausente, solicite seu caminho ou conteúdo.
   Componentes com contextos distintos justificam estratégias próprias? Considere
   combinações sem exigir todas as quatro combinações.
 - **Propriedades:** a priorização MuSCoW está justificada? As propriedades têm
-  relação com a finalidade e podem ser observadas? A cobertura é viável?
+  relação com a finalidade e podem ser observadas? As propriedades Must selecionadas
+  estão cobertas por episódios ou possuem uma lacuna registrada? A cobertura é viável?
 - **Episódios:** objetivos, propriedades, classificação principal, método e evidência
   esperada são compatíveis? Usos complementares da evidência e condições parcialmente
   reais estão explícitos quando pertinentes? A classificação principal segue a
@@ -35,7 +36,8 @@ Se o plano estiver ausente, solicite seu caminho ou conteúdo.
   categorias exclusivas? Momento e responsáveis previstos estão registrados ou
   pendentes? Os métodos atendem às condições do DSREMSF e aos recursos
   disponíveis? Um teste artificial de funcionamento não demonstra efetividade em
-  uso real. Avaliação formativa precisa apoiar a próxima decisão; avaliação
+  uso real. A decisão que a evidência deverá apoiar está explícita?
+  Avaliação formativa precisa apoiar a próxima decisão; avaliação
   somativa precisa atender aos destinatários da evidência. Uma alternativa no
   DSREMSF não demonstra, sozinha, adequação ao caso.
 - **Escopo e continuidade:** cortes de escopo explicam economia e consequências?
@@ -54,11 +56,19 @@ amostra ou limiar universal. Não simule parecer independente ou aprovação ét
 ## Apresentação e edição
 
 Para cada observação relevante, informe **localização**, **trecho ou informação
-observada**, **problema ou lacuna**, **fundamento** e **recomendação**. Conclua com
-as decisões ou informações necessárias para o próximo passo. Se a cobertura for
+observada**, **problema ou lacuna**, **fundamento**, **consequência** e
+**recomendação**. Use os IDs existentes; não duplique o plano em outra matriz.
+A consequência indica se a observação impede uma escolha fundamentada, exige
+detalhamento ou representa melhoria opcional, explicando o efeito no caso.
+Conclua com as decisões ou informações necessárias para o próximo passo. Se a cobertura for
 parcial, explicite o material indisponível.
 
 Por padrão, apresente a revisão no chat e não altere o plano. Se o pesquisador
 solicitar ajustes, aplique somente os ajustes autorizados, preservando as decisões
-aceitas. Uma alternativa criada durante a revisão continua proposta. Não registre
+aceitas. Antes de salvar, compare restrições, acesso, prioridades, critérios
+conhecidos e limites das conclusões com o plano anterior. Não fortaleça nem
+enfraqueça silenciosamente o alcance da evidência pretendida. Alterações de sentido
+exigem justificativa e aceitação correspondente; esta conferência contextual não
+é uma garantia automática de fidelidade semântica.
+Uma alternativa criada durante a revisão continua proposta. Não registre
 um parecer como prova de validade científica, eficácia ou execução.

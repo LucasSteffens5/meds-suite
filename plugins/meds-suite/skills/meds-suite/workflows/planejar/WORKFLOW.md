@@ -7,7 +7,11 @@ Entrega: plano MEDS parcial ou completo, com escolhas justificadas, pendências 
 próximo passo, salvo no projeto da pesquisa conforme a regra de continuidade.
 
 Leia a [referência MEDS](../../references/meds.md) e use o
-[modelo do plano](../../assets/plano-meds.md). Para casos novos sempre pergunte tudo que for pertinente ao projeto e as informações cruciais para executar MEDS. Para um caso existente, leia o plano antes de fazer perguntas. Aproveite informações e decisões já registradas e sempre lembre o usuário das decisões que ele já tomou.
+[modelo do plano](../../assets/plano-meds.md). Antes de perguntar, identifique
+informações disponíveis, escolhas aceitas e lacunas que afetam a etapa atual.
+Investigue essa etapa em profundidade; adie detalhes de episódios distantes.
+Explique qual escolha depende de cada informação solicitada. Para um caso existente,
+leia primeiro o plano e recorde somente as decisões pertinentes ao próximo passo.
 
 ## Condução
 
@@ -42,24 +46,36 @@ Leia a [referência MEDS](../../references/meds.md) e use o
    Relacione cada um aos objetivos e propriedades e registre sua classificação
    principal para consultar DSREMSF, conforme a convenção descrita em [FEDS](../../references/feds.md).
    Indique usos complementares da evidência e condições parcialmente reais, quando
-   pertinentes. Compare um ou mais métodos candidatos usando suas condições e os
-   recursos disponíveis. Examine cedo os riscos técnicos e humanos prioritários,
+   pertinentes. Justifique a adequação do método às propriedades, à evidência
+   pretendida e aos recursos. Compare alternativas quando houver uma escolha real,
+   sem exigir comparação artificial para uma opção já fundamentada.
+   Examine cedo os riscos técnicos e humanos prioritários,
    antes de comprometer recursos em uma abordagem inviável. Descreva justificativa,
    escopo, evidência esperada, responsáveis previstos quando conhecidos e limites
    das conclusões. Uma avaliação formativa deve fornecer informação suficiente
-   para a próxima decisão; uma somativa deve
-   atender às necessidades de rigor de seus destinatários. Evite detalhar
+   para a próxima decisão; registre qual decisão a evidência deverá apoiar.
+   Uma somativa deve atender às necessidades de rigor de seus destinatários. Evite detalhar
    prematuramente episódios distantes. Protocolos de execução exigem literatura
    própria do método, que esta suíte não fornece.
 6. **Consolidar.** Registre escolhas como propostas até haver aceitação documentada.
    Quando houver uma decisão metodológica necessária, apresente a proposta concreta
    e obtenha a escolha do pesquisador. Reutilize aceitação existente e não crie
-   aprovação obrigatória para cada campo. Registre pendências e próximo passo.
+   aprovação obrigatória para cada campo. Nas justificativas metodológicas,
+   diferencie orientação da fonte (título e tópico da síntese), convenção da suíte
+   e julgamento contextual. Registre pendências e próximo passo.
 
 O fluxo acima é uma orientação inicial, não uma sequência rígida. Mudanças no
 contexto podem exigir revisar objetivos, estratégia ou propriedades. Identifique
-quais episódios e decisões são afetados; uma escolha anterior não confirma uma
-nova escolha incompatível com ela.
+quais objetivos, propriedades e episódios são afetados, usando seus IDs. No
+histórico, registre o contexto anterior, a mudança e os itens a revisar. Mantenha
+a aceitação histórica, mas indique quando a escolha deixou de ser aplicável ou
+precisa ser reexaminada. Preserve escolhas não afetadas; uma escolha anterior não
+confirma uma nova escolha incompatível com ela.
+
+Antes de salvar ajustes, compare o plano anterior e o revisado quanto às
+restrições, ao acesso, às prioridades, aos critérios conhecidos e aos limites das
+conclusões. Mudanças de sentido ou alcance precisam de justificativa e aceitação
+correspondente; conservar palavras e números não garante preservar sentido.
 
 ## Eficiência e short-scoping
 

@@ -16,6 +16,7 @@ pendentes. Marque escolhas como propostas ou aceitas conforme o registro dispon�
 - Destinatários da evidência e necessidades conhecidas:
 - Recursos destinados à avaliação e às demais atividades DSR; acesso, riscos e
   restrições informados:
+- Restrições na formulação do pesquisador, quando orientarem escolhas:
 
 ## 1. Objetivos da avaliação
 
@@ -45,7 +46,9 @@ do projeto. Não preencher resultados de avaliações ainda não realizadas.
 
 Para consultar DSREMSF, registre uma classificação principal pela finalidade
 predominante e pelo ambiente previsto, com justificativa e usos complementares
-da evidência. É uma convenção operacional da suíte: os eixos de [FEDS](../references/feds.md)
+da evidência. É uma convenção operacional da suíte: os eixos de FEDS — Venable,
+Pries-Heje e Baskerville (2016), *FEDS: a Framework for Evaluation in Design Science
+Research*, DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36) —
 são contínuos e independentes; finalidade não se deduz do momento ou do nome do método.
 
 ### E1 — <nome do episódio>
@@ -63,6 +66,7 @@ são contínuos e independentes; finalidade não se deduz do momento ou do nome 
 - Responsáveis previstos, quando conhecidos, ou pendência:
 - Recursos e acesso necessários; disponibilidade conhecida ou pendente:
 - Evidência esperada e limitações das conclusões possíveis:
+- Decisão que a evidência deverá apoiar:
 - Sinergias com outras propriedades ou episódios:
 - Short-scoping, quando pertinente: escopo original, corte proposto, justificativa,
   economia esperada, consequências para rigor/cobertura, riscos residuais e escolha:
@@ -70,11 +74,15 @@ são contínuos e independentes; finalidade não se deduz do momento ou do nome 
 
 ## Decisões e mudanças
 
-| Data ou contexto disponível | Item | Escolha | Proposta/aceita | Quem decidiu e registro da aceitação | Impacto nos demais itens |
+| Data ou contexto disponível | Item/ID | Escolha | Proposta/aceita | Quem decidiu; trecho breve ou localizador da aceitação | Aplicabilidade atual e impacto nos demais itens |
 |---|---|---|---|---|---|
 
 Registre somente autoria, data e aceitação disponíveis. Preserve escolhas aceitas;
-quando forem alteradas, mantenha registro da mudança e dos itens a revisar.
+quando o contexto mudar, mantenha a aceitação histórica e registre o contexto
+anterior, a mudança e os IDs a revisar. Indique escolhas ainda aplicáveis, a revisar
+ou não aplicáveis ao contexto atual. Substituições permanecem propostas até aceitas.
+Nas justificativas, diferencie orientação da fonte, convenção da suíte e julgamento
+contextual; referências do plugin são identificadas por título e DOI.
 
 ## Pendências e próximo passo
 
