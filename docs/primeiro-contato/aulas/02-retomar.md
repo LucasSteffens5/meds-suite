@@ -1,81 +1,72 @@
 # Aula 2 — Retomar e adaptar · 8 minutos
 
-**Meta:** continuar sem recomeçar e reduzir esforço mostrando o que se perde.
+**Meta:** atualizar o plano quando prazo e recursos mudam, preservando o que
+continua válido.
 
-## 1. Recupere o plano
+MEDS permite revisitar escolhas conforme o projeto evolui. Uma mudança de recursos
+pode afetar a trajetória e o escopo de episódios sem alterar os objetivos.
 
-**Ação:** abra uma conversa nova. Se fez a aula 1, use seu plano. Caso contrário,
-peça antes: “Copie `docs/primeiro-contato/materiais/plano-partida-aula-02.md` para
-`docs/primeiro-contato/pratica/organizador/plano-meds.md` somente se o destino não
-existir. Preserve a entrada.” Depois envie:
+## 1. Abra o plano
 
-```text
-Use $meds-suite para retomar
- docs/primeiro-contato/pratica/organizador/plano-meds.md.
-Leia o plano inteiro, preserve as decisões aceitas e identifique
-as pendências e o próximo passo. Não peça nova aceitação do que
-já está documentado e continua aplicável.
-```
+Se concluiu a aula 1, retome o arquivo que criou. Para começar por esta aula,
+peça à suíte que copie o plano inicial para o caminho de prática:
 
-**Confira:** o plano anterior foi lido; a restrição sobre documentos pessoais
-permanece. Os registros do plano de partida são aceitações fictícias do exercício.
+    Copie docs/primeiro-contato/materiais/plano-partida-aula-02.md para
+    docs/primeiro-contato/pratica/organizador/plano-meds.md somente se esse
+    destino ainda não existir. Preserve o arquivo de entrada.
 
-## 2. Informe a mudança
+Depois, envie:
 
-**Ação:** use a mudança fictícia de prazo:
+    Use $meds-suite para retomar
+    docs/primeiro-contato/pratica/organizador/plano-meds.md. Leia o plano,
+    identifique as escolhas aceitas, as pendências e o próximo passo. Preserve
+    as escolhas que continuam aplicáveis.
 
-```text
-No exercício, o prazo caiu de duas semanas para três dias.
-Continuo sem acesso confirmado a estudantes. Quero manter O1 e O2.
-Registre a mudança e identifique os IDs afetados. Proponha ajustes
-viáveis, sem registrá-los como aceitos.
-```
+**O que observar:** a suíte parte do plano existente e não pede que você decida
+novamente algo que continua válido.
 
-**Confira:** histórico preservado e escolhas afetadas marcadas para reexame;
-nenhum acesso, método ou resultado novo inventado.
+## 2. Registre a mudança de contexto
 
-## 3. Proponha um corte concreto
+No exemplo, o prazo disponível para a avaliação caiu de duas semanas para três
+dias. O acesso a estudantes segue sem confirmação.
 
-**Ação:** peça **short-scoping**, uma redução justificada do escopo do método.
+    O prazo para esta avaliação caiu de duas semanas para três dias. O acesso a
+    estudantes ainda não está confirmado. Quero manter O1 e O2. Registre a
+    mudança, identifique os itens afetados e proponha ajustes sem marcá-los
+    como aceitos.
 
-```text
-Considere reduzir o episódio que verifica as buscas: de S1–S6
-para S1–S3 da ficha do caso. Se meu plano não prevê esses seis
-cenários, primeiro mostre a diferença e proponha o escopo correspondente.
-Registre apenas a proposta: escopo original, corte, justificativa,
-economia qualitativa, efeitos sobre rigor e cobertura e riscos residuais.
-Explique quais conclusões o escopo menor permitiria.
-```
+**Como se encaixa no MEDS:** recursos fazem parte da escolha da estratégia e da
+trajetória. A suíte registra quais partes do plano precisam ser reexaminadas.
 
-**Confira:** S4–S6 deixam de ser cobertos; menor trabalho não significa mesma
-força da evidência. A economia não recebe um percentual inventado.
+**O que observar:** objetivos que continuam viáveis podem permanecer; a cobertura
+dos episódios e as conclusões possíveis podem mudar.
 
-## 4. Decida sobre a proposta
+## 3. Examine um corte de escopo
 
-**Ação:** depois de ler os efeitos, aceite se concordar:
+Peça uma proposta para reduzir o episódio de busca de seis cenários para três:
 
-```text
-Aceito, neste exercício, o corte descrito para S1–S3 e o julgamento
-restrito a esses cenários. Não aceito concluir correção geral nem
-benefício em uso real. Preserve O1 e O2 com esse limite explícito,
-a restrição de dados e o histórico; salve no mesmo arquivo.
-As outras substituições continuam propostas.
-```
+    Quero reduzir o escopo de E2: proponha avaliar S1–S3 em vez de S1–S6.
+    Explique a economia
+    esperada, o que deixa de ser coberto, os riscos residuais e quais conclusões
+    continuam justificadas. Registre a redução como proposta.
 
-**Confira:** o registro aponta a aceitação desta rodada e a cobertura reduzida.
-Se o corte não servir, rejeite-o; a suíte deve preservar sua escolha.
+**Como se encaixa no MEDS:** short-scoping (redução justificada do escopo) adapta
+um método ao trabalho necessário para a decisão. A redução precisa preservar evidência suficiente para
+o rigor requerido.
 
-## 5. Confira a continuidade
+**O que observar:** S4–S6 deixam de ser examinados. A redução pode poupar
+preparação e análise, mas já não permite julgar esses cenários.
 
-**Ação:** faça uma última pergunta:
+## 4. Decida e continue
 
-```text
-Resuma o que mudou, o que permaneceu aceito e o que está pendente.
-Mostre a próxima ação útil sem afirmar que executamos as avaliações.
-```
+Se o corte for adequado, envie:
 
-**Confira:** acesso, critérios da interface e protocolo continuam pendentes.
-Compare com o [plano de referência](../referencias/plano-aula-02.md); diferenças
-justificadas são possíveis. O arquivo de entrada permanece intacto.
+    Aceito o corte de E2 para S1–S3 e limito a conclusão aos cenários cobertos.
+    Preserve O1 e O2, registre esta escolha e seu efeito sobre a cobertura.
+    Não conclua correção geral nem benefício em uso real. Salve o plano no
+    mesmo caminho.
 
-**Próximo:** [aula 3](03-revisar.md).
+Se não concordar, peça outra proposta. Compare o resultado com o
+[plano de referência após a mudança](../referencias/plano-aula-02.md).
+
+**Próximo:** [aula 3 — revisar](03-revisar.md).
