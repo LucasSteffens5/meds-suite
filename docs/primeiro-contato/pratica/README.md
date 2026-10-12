@@ -1,12 +1,11 @@
-# Seus arquivos de prática
+# Arquivos de prática
 
-Os prompts salvarão aqui os planos do exercício. As entradas ficam em
-[../materiais](../materiais/ficha-caso.md) e os exemplos em
-[../referencias](../referencias/plano-aula-01.md); não os substitua.
+As aulas usam estes caminhos para os planos que você criar ou atualizar:
 
-- `organizador/plano-meds.md`: aulas 1 e 2, um plano que evolui.
-- `revisao/plano-meds.md`: cópia didática da aula 3.
-- `extras/`: exercícios opcionais em caminhos independentes.
+- organizador/plano-meds.md: plano que evolui nas aulas 1 e 2.
+- revisao/plano-meds.md: cópia analisada na aula 3.
+- extras/: saídas independentes dos exercícios opcionais.
 
-Estas subpastas e arquivos serão criados durante a prática, não foram apresentados
-como saídas já produzidas pela suíte. Tudo fica sob a pasta `docs/` ignorada no Git.
+As entradas ficam em ../materiais e os exemplos de comparação em ../referencias.
+Use outro caminho quando quiser repetir uma prática sem substituir um plano que
+deseja guardar.

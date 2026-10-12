@@ -1,51 +1,38 @@
-# Primeiro contato com a MEDS Suite
+# Primeiro contato com MEDS
 
-**Três aulas, um caso fictício, cerca de 25 minutos.** Você aprenderá a planejar,
-retomar e revisar a avaliação de uma solução. Os tempos são metas de leitura e
-prática, não medições com usuários; a entrevista pode exigir mais rodadas.
+Um roteiro curto para aprender MEDS enquanto você usa a suíte no Codex. Em cerca
+de 25 minutos, você vai planejar, adaptar e revisar um programa de avaliação para
+um organizador de documentos acadêmicos.
 
 ## Antes de começar
 
-Abra o Codex na pasta **meds-suite**, que contém o README do plugin. Os caminhos
-nos prompts são relativos a essa pasta. Se preferir outro projeto, copie esta
-pasta inteira para ele, mantendo a estrutura, e adapte apenas o prefixo dos caminhos.
+Abra o Codex na pasta meds-suite, onde está o README do plugin. Os caminhos dos
+prompts partem dessa pasta. Confira a instalação na seção de instalação do
+[README da suíte](../../README.md#instalação-local).
 
-Confira a instalação pelo [README da suíte](../../README.md#instalação-local).
-Em uma conversa nova, a skill MEDS Suite deve aparecer no seletor. Se não aparecer,
-conclua a instalação antes da prática. Este material acompanha o pacote local
-**0.1.1**; instalar um pacote antigo pode produzir diferenças de comportamento.
-Nenhuma etapa deste tutorial instala ou atualiza o plugin automaticamente.
+As aulas usam linguagem natural: copie um prompt, leia a resposta e avance quando
+a relação entre contexto, escolha e evidência estiver clara. Consulte o
+[banco de respostas](materiais/respostas.md) quando precisar de um dado do exemplo.
 
-Todos os personagens, recursos e decisões deste exercício são fictícios. O
-protótipo é descrito para planejar avaliações; não há software a executar nem
-participantes a recrutar. Você representa a pesquisadora Ana apenas na simulação.
+Os planos descrevem avaliações futuras. Eles ajudam a praticar o planejamento;
+não apresentam resultados de avaliações realizadas.
 
-## Siga esta ordem
+## Trilha
 
-| Aula | Você faz | Tempo | Ao terminar |
-|---|---|---|---|
-| [1. Planejar](aulas/01-planejar.md) | Cria um plano parcial | 10 min | Objetivos, estratégia, prioridades e episódios relacionados |
-| [2. Retomar](aulas/02-retomar.md) | Adapta o plano a um prazo menor | 8 min | Mudança e corte de escopo documentados |
-| [3. Revisar](aulas/03-revisar.md) | Analisa uma cópia e autoriza correções | 7 min | Revisão localizada e plano corrigido |
+| Aula | O que você aprende | Tempo |
+|---|---|---:|
+| [1. Planejar](aulas/01-planejar.md) | Os quatro passos de MEDS aplicados ao exemplo | 12 min |
+| [2. Retomar](aulas/02-retomar.md) | Como atualizar escolhas quando os recursos mudam | 8 min |
+| [3. Revisar](aulas/03-revisar.md) | Como conferir a coerência entre plano e conclusões | 7 min |
 
-1. Abra a [ficha do caso](materiais/ficha-caso.md).
-2. Faça a aula 1 copiando um prompt por vez. Aguarde a resposta antes de avançar.
-3. Consulte o [banco de respostas](materiais/respostas.md) somente quando precisar
-   responder a uma pergunta. Não envie todas as respostas de uma vez.
-4. Continue pelas aulas 2 e 3. Cada uma tem uma entrada pronta para quem começar ali.
+Comece pela [ficha do organizador](materiais/ficha-caso.md). O plano das aulas 1 e
+2 fica em docs/primeiro-contato/pratica/organizador/plano-meds.md. A aula 3 usa
+uma cópia em docs/primeiro-contato/pratica/revisao/plano-meds.md. Os exemplos em
+referencias/ e as entradas em materiais/ servem de apoio; mantenha seus arquivos
+de prática em caminhos separados.
 
-O arquivo produzido nas aulas 1 e 2 será
-`docs/primeiro-contato/pratica/organizador/plano-meds.md`. A aula 3 usa outra cópia
-em `pratica/revisao/plano-meds.md`. As entradas em `materiais/` e os exemplos em
-`referencias/` devem permanecer intactos. Para repetir, use uma nova subpasta e
-adapte os prompts; não substitua uma prática que queira guardar.
+Depois da trilha, escolha um [exercício opcional](opcionais.md). A
+[tabela de cobertura](cobertura.md) aponta o que cada exercício permite praticar.
 
-## Depois do essencial
-
-Escolha um [exercício opcional](opcionais.md), sem obrigação de fazer todos.
-A [tabela de cobertura](cobertura.md) mostra onde experimentar cada capacidade.
-Os exemplos de referência estão indicados ao fim de cada aula: compare as relações
-e os limites, não palavras idênticas.
-
-Um plano descreve avaliações futuras. Uma revisão verifica coerência; nenhuma
-etapa deste material representa execução, aprovação ética ou eficácia comprovada.
+A pergunta que guia as aulas é simples: como saber se a busca funciona, o que
+precisa melhorar e que evidência sustenta cada decisão?
