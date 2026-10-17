@@ -1,22 +1,22 @@
 # MEDS Suite para Codex
 
-Plugin `meds-suite` v0.1.3 com uma skill coordenadora para ensinar, planejar, retomar e revisar
+Plugin `meds-suite` v0.1.4 com uma skill coordenadora para planejar, retomar e revisar
 programas de avaliação de artefatos em Design Science Research (DSR).
 O planejamento fica em um arquivo Markdown por caso.
 
 ## Primeiro uso no Codex
 
-Depois de instalar a suite, abra uma conversa do Codex na pasta onde deseja guardar
-o exemplo e envie:
+Depois de instalar a suite, abra uma conversa do Codex na pasta do projeto da
+pesquisa e descreva o caso que deseja planejar:
 
 ```text
-Use $meds-suite para me ensinar MEDS com um exemplo simples.
+Use $meds-suite para planejar a avaliação do meu artefato. Vou descrever o caso e as informações disponíveis.
 ```
 
-A suite apresenta um organizador fictício, explica uma etapa por vez e salva o
-plano em `casos/tutorial-meds/plano-meds.md`. Você pode parar e retomar em outra
-conversa com “Continue o tutorial MEDS”. Não precisa abrir este repositório,
-procurar fichas ou copiar materiais. O exemplo inteiro acompanha o plugin.
+O plugin instalado não contém casos de tutorial. Para aprender com o exercício
+fictício, use o [tutorial do repositório](docs/primeiro-contato/README.md) e cole
+no chat somente as mensagens que quiser usar. O plano desse exercício ficará na
+pasta do projeto aberto no Codex; ele não é um caso real de pesquisa.
 
 ## Arquitetura
 
@@ -27,16 +27,16 @@ plugins/meds-suite/
   skills/meds-suite/
     SKILL.md                          Entrada e seleção do fluxo
     agents/openai.yaml                Metadados da interface
-    workflows/tutorial/WORKFLOW.md     Exemplo guiado autocontido
     workflows/planejar/WORKFLOW.md     Planejamento e retomada
     workflows/revisar/WORKFLOW.md      Revisão de coerência e lacunas
     references/                       MEDS, FEDS e contexto DSRM
     assets/plano-meds.md               Modelo de plano por caso
 ```
 
-A skill carrega o fluxo solicitado e suas referências conforme a etapa. O plano
-do pesquisador é salvo no projeto da pesquisa, fora do pacote instalado. Os recursos
-mantêm uma única cópia no plugin; os metadados em `agents/` não criam subagentes.
+A skill carrega o fluxo solicitado e suas referências conforme a etapa. O caso vem
+da conversa e do plano indicado pelo pesquisador. Exemplos colados são contexto
+somente do exercício que a pessoa identificar. O plano é salvo no projeto da
+pesquisa, fora do pacote instalado. Os metadados em `agents/` não criam subagentes.
 
 O fluxo de planejamento organiza objetivos, estratégia FEDS, propriedades
 priorizadas por MuSCoW e episódios com métodos candidatos DSREMSF. As escolhas podem
@@ -113,8 +113,8 @@ python3 -m unittest discover -s tests -v
 ```
 
 O validador lê manifestos, caminhos, versões, entrada única e links locais dos
-recursos e do README. Confere o tutorial empacotado, rejeita links de recursos para
-fora do plugin e verifica a legenda no modelo exportável. Retorna
+recursos e do README. Rejeita tutoriais no pacote e links de recursos para fora do
+plugin, e verifica a legenda no modelo exportável. Retorna
 código 0 para estrutura aprovada e 1 para falhas localizadas, sem editar arquivos.
 Seu leitor de links cobre a sintaxe simples usada no pacote; não verifica âncoras,
 disponibilidade de URLs externas nem conteúdo metodológico.

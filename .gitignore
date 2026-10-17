@@ -1,6 +1,7 @@
 /AGENTS.md
-/docs/
+/docs/*
 !/docs/primeiro-contato/
+!/docs/primeiro-contato/**
 *.pdf
 *.tar.gz
 .DS_Store

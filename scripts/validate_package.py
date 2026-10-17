@@ -109,18 +109,39 @@ def validate(root):
         error(manifest_path, "versões do plugin, skill e apresentação no README devem coincidir")
     if skill_text.count(LEGEND) != 1:
         error(skill_path, "deve conter uma única legenda fixa para as respostas da suíte")
+    if re.search(r"tutorial|ensinar MEDS|exemplo simples", header, re.IGNORECASE):
+        error(skill_path, "descrição da skill não deve promover um tutorial como modo de uso")
+    interface_path = SKILL / "agents/openai.yaml"
+    interface = read(interface_path)
+    if re.search(r"tutorial|ensinar MEDS|exemplo simples", interface, re.IGNORECASE):
+        error(interface_path, "metadados de interface não devem promover um tutorial como modo de uso")
 
     skills = sorted((root / "plugins").rglob("SKILL.md"))
     if skills != [root / skill_path]:
         error(PLUGIN, "deve existir somente a entrada skills/meds-suite/SKILL.md")
-    for required in ("agents/openai.yaml", "workflows/tutorial/WORKFLOW.md",
-                     "workflows/planejar/WORKFLOW.md",
+    tutorial_dir = root / SKILL / "workflows/tutorial"
+    if tutorial_dir.exists():
+        error(tutorial_dir.relative_to(root), "tutoriais devem permanecer fora do plugin instalado")
+    tutorial_markers = (
+        "casos/tutorial-meds/",
+        "D1 é “Calendário acadêmico”",
+        "D2 é “Guia de matrícula”",
+        "D3 é “Modelo de relatório”",
+    )
+    for path in sorted((root / SKILL).rglob("*.md")):
+        content = read(path.relative_to(root))
+        for marker in tutorial_markers:
+            if marker in content:
+                error(path.relative_to(root), "dados do tutorial não podem entrar no plugin instalado")
+                break
+    for required in ("agents/openai.yaml", "workflows/planejar/WORKFLOW.md",
                      "workflows/revisar/WORKFLOW.md", "references/meds.md",
                      "references/feds.md", "references/dsrm.md", "assets/plano-meds.md"):
         if not (root / SKILL / required).is_file():
             error(SKILL / required, "recurso obrigatório ausente")
 
-    resources = [root / "README.md", *sorted((root / SKILL).rglob("*.md"))]
+    resources = [root / "README.md", root / "docs/primeiro-contato/README.md",
+                 *sorted((root / SKILL).rglob("*.md"))]
     for path in resources:
         relative = path.relative_to(root)
         for target in link_targets(read(relative)):
@@ -140,8 +161,6 @@ def validate(root):
 
     template_path = SKILL / "assets/plano-meds.md"
     template = read(template_path)
-    if not (root / SKILL / "workflows/tutorial/WORKFLOW.md").is_file():
-        error(SKILL / "workflows/tutorial/WORKFLOW.md", "tutorial não está incluído no plugin instalado")
     if template.count("## Legenda") != 1 or template.count(LEGEND) != 1 or not template.rstrip().endswith(LEGEND):
         error(template_path, "deve terminar com uma única cópia da legenda fixa")
     for target in link_targets(template):

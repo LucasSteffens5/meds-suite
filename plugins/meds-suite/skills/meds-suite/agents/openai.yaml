@@ -1,4 +1,4 @@
 interface:
   display_name: "MEDS Suite"
-  short_description: "Aprenda MEDS em exemplo guiado ou avalie seu artefato"
-  default_prompt: "Use $meds-suite para me ensinar MEDS com um exemplo simples."
+  short_description: "Planeje ou revise um programa de avaliação MEDS"
+  default_prompt: "Use $meds-suite para planejar a avaliação do meu artefato. Vou descrever o caso e as informações disponíveis."

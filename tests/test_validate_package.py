@@ -65,16 +65,17 @@ class PackageTests(unittest.TestCase):
             with self.subTest(path=path):
                 file = self.root / path
                 original = file.read_text()
-                file.write_text(original.replace("0.1.3", "9.9.9"), encoding="utf-8")
+                file.write_text(original.replace("0.1.4", "9.9.9"), encoding="utf-8")
                 self.assertTrue(validator.validate(self.root))
                 file.write_text(original, encoding="utf-8")
 
     def test_duplicate_skill_and_missing_workflow(self):
         tutorial = self.root / validator.SKILL / "workflows/tutorial/WORKFLOW.md"
-        content = tutorial.read_text(encoding="utf-8")
-        tutorial.unlink()
+        tutorial.parent.mkdir()
+        tutorial.write_text("recurso didático", encoding="utf-8")
         self.assertTrue(any("tutorial" in e for e in validator.validate(self.root)))
-        tutorial.write_text(content, encoding="utf-8")
+        tutorial.unlink()
+        tutorial.parent.rmdir()
         extra = self.root / validator.SKILL / "workflows/planejar/SKILL.md"
         extra.write_text("extra", encoding="utf-8")
         self.assertTrue(validator.validate(self.root))
@@ -95,12 +96,32 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(validator.validate(self.root), [])
 
     def test_plugin_resources_cannot_depend_on_checkout_docs(self):
-        tutorial = self.root / validator.SKILL / "workflows/tutorial/WORKFLOW.md"
-        original = tutorial.read_text(encoding="utf-8")
-        tutorial.write_text(original + "\n[material externo](../../../../../../docs/primeiro-contato/README.md)\n",
+        resource = self.root / validator.SKILL / "references/meds.md"
+        original = resource.read_text(encoding="utf-8")
+        resource.write_text(original + "\n[material externo](../../../../../../docs/primeiro-contato/README.md)\n",
                             encoding="utf-8")
         self.assertTrue(any("fora do plugin instalado" in e
                             for e in validator.validate(self.root)))
+
+    def test_tutorial_case_fingerprints_cannot_enter_plugin(self):
+        resource = self.root / validator.SKILL / "references/meds.md"
+        original = resource.read_text(encoding="utf-8")
+        resource.write_text(original + "\nD1 é “Calendário acadêmico”\n", encoding="utf-8")
+        self.assertTrue(any("dados do tutorial" in e for e in validator.validate(self.root)))
+
+    def test_tutorial_cannot_return_to_skill_description_or_prompt(self):
+        skill = self.root / validator.SKILL / "SKILL.md"
+        original_skill = skill.read_text(encoding="utf-8")
+        skill.write_text(original_skill.replace("description:", "description: Ensinar MEDS com exemplo simples;", 1),
+                         encoding="utf-8")
+        self.assertTrue(any("descrição da skill" in e for e in validator.validate(self.root)))
+        skill.write_text(original_skill, encoding="utf-8")
+        interface = self.root / validator.SKILL / "agents/openai.yaml"
+        original_interface = interface.read_text(encoding="utf-8")
+        interface.write_text(original_interface.replace("planejar a avaliação do meu artefato",
+                                                       "ensinar MEDS com exemplo simples"),
+                              encoding="utf-8")
+        self.assertTrue(any("metadados de interface" in e for e in validator.validate(self.root)))
 
     def test_exported_template_rejects_even_existing_install_link(self):
         path = self.root / validator.SKILL / "assets/plano-meds.md"
