@@ -1,122 +1,306 @@
-# MEDS: fundamento para planejamento e revisão
+# MEDS: decisões para organizar a avaliação
 
-Síntese original de Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026).
-*MEDS: Methodology for Evaluation in Design Science*. European Journal of
-Information Systems. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+Este documento explica para uso na suíte o conhecimento de Baskerville,
+Pries-Heje e Venable (2026), *MEDS: Methodology for Evaluation in Design Science*,
+DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+Os passos, MuSCoW, DSREMSF e short-scoping pertencem à proposta dos autores.
+As perguntas, a organização desta consulta e as fichas de decisão são formas de
+operacionalização da suíte, não novos métodos atribuídos ao artigo.
 
-## Processo e seus quatro passos
+## Do programa às decisões de cada episódio
 
-MEDS organiza o programa de **avaliações** de um projeto DSR. Seus componentes
-auxiliam escolhas proporcionais ao rigor requerido e aos recursos disponíveis.
-Os quatro passos são:
+Fundamento: Baskerville, Pries-Heje e Venable (2026), processo MEDS,
+DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
 
-| Passo | Pergunta central | Orientação |
-|---|---|---|
-| 1. Definir objetivos | O que o programa de avaliações precisa alcançar? | Caracterizar os artefatos avaliados, necessidades de rigor, eficiência, redução de riscos/incertezas e ética |
-| 2. Escolher estratégia e trajetória | Que combinação e sequência de avaliações atende ao projeto? | Usar FEDS considerando objetivos, riscos e recursos |
-| 3. Escolher propriedades | Quais características ou efeitos do artefato importam? | Identificar candidatos e priorizar com MuSCoW |
-| 4. Planejar episódios | Como avaliar as propriedades selecionadas em cada ocasião? | Usar DSREMSF, condições de escolha e short-scoping quando pertinente |
+O planejamento conecta decisões locais à avaliação do projeto inteiro.
+O **avaliando** é o artefato examinado. Cada ocasião de avaliação voltada a um
+ou mais objetivos constitui um **episódio**. O **programa** coordena estratégia,
+trajetória e episódios, em vez de tratar cada coleta como uma iniciativa isolada.
 
-As primeiras escolhas se beneficiam do planejamento antecipado. O detalhamento
-de um episódio pode ocorrer próximo de sua realização; objetivos e propriedades
-podem mudar durante o projeto. Não transformar os passos em fases irreversíveis.
-O esforço tende a crescer dos objetivos gerais ao planejamento e execução dos
-episódios: acrescentar objetivos ou propriedades amplia o trabalho necessário.
+A ordem dos quatro passos é a de MEDS; as perguntas organizam sua aplicação:
 
-## Objetivos e propriedades
+1. **Definir objetivos:** para quais decisões e destinatários a avaliação deve
+   produzir evidência? Caracterizar o avaliando e as necessidades de rigor,
+   recursos, redução de incertezas/riscos e ética dá contexto à resposta.
+2. **Escolher estratégia e trajetória:** como distribuir as avaliações diante
+   dessas condições? A base é [FEDS](feds.md), de Venable, Pries-Heje e Baskerville
+   (2016), DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+3. **Escolher propriedades:** quais características, usos ou efeitos do artefato
+   merecem evidência? MuSCoW ajuda a priorizar as candidatas.
+4. **Planejar episódios:** qual avaliação concreta pode produzir a evidência
+   necessária? DSREMSF apoia a escolha de métodos; short-scoping e sinergias ajudam
+   a dimensionar o trabalho, mantendo rigor suficiente.
 
-Os objetivos da avaliação concernem ao programa; as propriedades concernem ao
-artefato, ao seu uso ou ao efeito desejado. A prioridade é garantir segurança e
-condução ética; depois, avaliar a utilidade pretendida com rigor suficiente para os
-destinatários da evidência e equilibrar esse rigor com os recursos disponíveis.
-A redução de riscos e incertezas evita falhas e retrabalho.
+Objetivos e estratégia devem influenciar o projeto cedo, enquanto ainda é possível
+responder a riscos e obter recursos necessários. Propriedades iniciais também
+podem ser antecipadas e depois refinadas no design e desenvolvimento. Detalhe cada
+episódio perto de sua realização, quando finalidade e necessidade estiverem mais
+claras. Qualquer decisão pode ser revista com o contexto. Ampliar objetivos e
+propriedades normalmente amplia o trabalho de planejar e executar avaliações.
 
-Identifique propriedades candidatas pela finalidade do artefato, usando listas
-existentes ou brainstorming. Exemplos são usabilidade, segurança, confiabilidade
-e desempenho; sua pertinência depende do caso. Uma propriedade possível não é,
-por isso, obrigatória: selecione pelo efeito prático ou questão de pesquisa.
+## O que importa avaliar e quanto esforço cabe
 
-MuSCoW prioriza propriedades relevantes para a finalidade do artefato:
+Fundamento: Baskerville, Pries-Heje e Venable (2026), objetivos e propriedades em
+MEDS, DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
 
-| Grupo | Significado |
+Caracterize o avaliando como produto ou processo, técnico ou sociotécnico, crítico
+ou não crítico para segurança. A dimensão sociotécnica pede atenção à usabilidade
+e à efetividade no contexto humano; a criticidade de segurança pode aumentar as
+exigências da avaliação. Essa caracterização ajuda a justificar o desenho.
+
+As quatro metas de MEDS tratam do programa de avaliações: **rigor**, para confiar
+na evidência; **eficiência**, para viabilizar o trabalho com tempo, dinheiro,
+equipamentos e acesso disponíveis; **redução de incertezas e riscos**, para evitar
+falhas e retrabalho; e **ética**, para minimizar riscos a pessoas, animais e
+organizações. Segurança e ética têm precedência. A utilidade pretendida precisa
+de rigor suficiente para pesquisadores e demais destinatários. Eficiência deve
+ser equilibrada com esse rigor e com os recursos das outras atividades DSR.
+Reexamine as prioridades quando condições ou restrições mudarem.
+
+As **propriedades** indicam o que observar no artefato, em seu uso ou nos efeitos
+práticos pretendidos. Justifique como cada candidata ajuda a tratar o problema ou
+a questão de pesquisa. Listas existentes podem sugerir usabilidade, segurança,
+confiabilidade e desempenho, mas não substituem essa justificativa. Brainstorming
+permite identificar candidatas além das listas. Separe gerar possibilidades de
+selecionar o que será avaliado: objetivos e recursos orientam essa seleção.
+
+## MuSCoW: prioridade não equivale a seleção automática
+
+Fundamento: Baskerville, Pries-Heje e Venable (2026), MuSCoW em MEDS,
+DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+Use as categorias dos autores para comunicar a importância de avaliar uma
+propriedade: **Must** indica necessidade; **Should**, uma avaliação que deveria
+ser contemplada; **Could**, uma possibilidade; **Would**, algo desejável incluir
+também. A quarta categoria segue **Would**, usada no corpo do artigo, sem
+substituí-la pela nomenclatura de outra técnica de priorização.
+
+O conjunto final deve ser manejável e justificado. A recomendação de até cinco
+propriedades é orientação de parcimônia, não proibição de uma sexta: o caso
+bibliográfico Intelligrid usou seis. Esse dado ilustra o método e não descreve
+o caso da pessoa. Pertinência e recursos decidem a quantidade; uma candidata,
+inclusive Would, pode ficar fora da avaliação selecionada.
+
+<a id="dsremsf-métodos-candidatos-por-quadrante"></a>
+
+## DSREMSF: índice de métodos e perguntas de decisão
+
+Fundamento: seleção, enquadramentos e condições do DSREMSF de Baskerville,
+Pries-Heje e Venable (2026), MEDS,
+DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+A seleção e as relações metodológicas são dos autores; o índice alfabético e as
+perguntas abaixo foram redigidos para consulta na suíte. Não constituem uma
+classificação nova ou um protocolo completo de execução.
+
+A estratégia situa a trajetória do projeto; o quadrante situa a finalidade e o
+ambiente de um episódio; o método especifica uma forma de obter evidência.
+Na base FEDS de Venable, Pries-Heje e Baskerville (2016), DOI
+[10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36), formativa/somativa é
+a finalidade e artificial/naturalística é o ambiente. Não deduza uma dimensão da
+outra, da cronologia ou do nome do método.
+
+O DSREMSF seleciona cinco posições por quadrante: vinte posições e dezenove métodos
+distintos, porque Lab Experiment aparece duas vezes. É uma seleção parcimoniosa,
+não exaustiva nem obrigatória. Considere objetivos, restrições, tipo de artefato e
+evidência pretendida ao usar as condições dos autores.
+
+FA = formativa artificial; FN = formativa naturalística; SA = somativa artificial;
+SN = somativa naturalística. Essas abreviações são uma convenção de apresentação
+da suíte para os enquadramentos do DSREMSF.
+
+| Método selecionado pelos autores | Enquadramento no DSREMSF |
 |---|---|
-| Must | Propriedades que precisam ser avaliadas |
-| Should | Propriedades que deveriam ser avaliadas |
-| Could | Propriedades que poderiam ser avaliadas |
-| Would | Propriedades que seria desejável incluir também |
+| Action Research | FN |
+| Computer Simulation | SA |
+| Criteria-Based Evaluation | FA |
+| Ethnography | SN |
+| Field Experiment | FN |
+| Field Study or Case Study | SN |
+| Interview/Focus Group | FN |
+| Lab Experiment | FA e SA |
+| Optimisation Analysis | SA |
+| Participant Observation | SN |
+| Pilot Study | SN |
+| Prototype Demo | FA |
+| Qualitative Survey | FN |
+| Quantitative Survey | SN |
+| Role Playing Simulation | SA |
+| Scenarios / Scenario Analysis | FA |
+| Testing | SA |
+| Theorem Proof | FA |
+| Think Aloud Protocol Analysis | FN |
 
-Aqui se adota **Would**. Evitar substituir esta classificação
-pelo MoSCoW habitual com Won't. A recomendação de selecionar até cinco propriedades
-é orientação de parcimônia, não limite universal.
+### Examinar propostas antes de depender do uso na organização
 
-## DSREMSF: métodos candidatos por quadrante
+Fundamento das relações condição–método: Baskerville, Pries-Heje e Venable (2026),
+DSREMSF, DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+As perguntas são da suíte; as recomendações condicionais permanecem dos autores.
 
-Formativa/somativa descreve a finalidade da avaliação. Artificial/naturalística
-descreve o ambiente. A estratégia FEDS orienta a trajetória; o quadrante caracteriza
-um episódio; o método descreve como obter evidência nesse episódio.
+- **Criteria-Based Evaluation (FA):** o que permitiria dizer que um critério foi
+  atendido? Quando a resposta pode vir de julgamento ou de medição, esse método
+  é candidato. Explicite qual critério se quer verificar e como fazê-lo.
+- **Theorem Proof (FA):** a questão pode ser tratada por representação matemática
+  ou lógica de um artefato puramente técnico? Essa combinação sustenta a escolha;
+  uma preferência por evidência formal não demonstra representabilidade.
+- **Scenarios / Scenario Analysis (FA):** consegue-se antecipar situações de uso
+  e organizá-las numa árvore de decisão? Esse requisito liga o método à escolha;
+  apenas chamar um exemplo de cenário não demonstra atendimento à condição.
+- **Prototype Demo (FA):** é viável produzir rapidamente uma versão de baixa
+  fidelidade e mostrá-la aos interessados? Ela pode ser parcial; a apresentação
+  dessa versão permite buscar retorno sem exigir o funcionamento completo.
+- **Lab Experiment (FA):** já se consegue realizar uma tarefa controlada com uma
+  versão utilizável, ainda que parcial? Essa condição difere de apenas apresentar
+  um protótipo. **Lab Experiment (SA)** exige protótipo utilizável e que evidência
+  de efetividade em uso real não seja essencial ao episódio. Justifique a posição
+  escolhida; um mesmo nome não torna as duas condições iguais.
 
-Há cinco posições por quadrante. Há vinte posições,
-não vinte métodos distintos: experimento de laboratório aparece em dois quadrantes.
-Os rótulos originais identificam os métodos na literatura.
+### Aprender com pessoas durante o desenvolvimento
 
-| Quadrante | Métodos candidatos |
-|---|---|
-| Formativa artificial | Criteria-Based Evaluation; Scenarios; Prototype Demo; Lab Experiment; Theorem Proof |
-| Formativa naturalística | Action Research; Interview/Focus Group; Field Experiment; Think Aloud Protocol Analysis; Qualitative Survey |
-| Somativa artificial | Lab Experiment; Optimisation Analysis; Testing; Role Playing Simulation; Computer Simulation |
-| Somativa naturalística | Quantitative Survey; Participant Observation; Pilot Study; Field Study or Case Study; Ethnography |
+Fundamento das condições: Baskerville, Pries-Heje e Venable (2026), DSREMSF,
+DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+Estas cinco alternativas correspondem a FN no índice.
 
-### Condições para orientar a escolha
+- **Interview/Focus Group:** a decisão exige compreender em detalhe sentimentos,
+  percepções, opiniões ou sugestões pessoais ou de grupo para orientar o desenho
+  formativo? É essa informação que fundamenta considerar a alternativa.
+- **Think Aloud Protocol Analysis:** havendo protótipo utilizável, é necessário
+  retorno detalhado sobre facilidade de aprendizagem ou usabilidade? Considere
+  o método por essa combinação de necessidade e condição do artefato.
+- **Qualitative Survey:** com protótipo utilizável, precisa-se reunir problemas
+  e sugestões de um grupo maior de usuários? O alcance do retorno buscado ajuda
+  a distinguir essa escolha da investigação detalhada anterior.
+- **Action Research:** há usuário ou cliente real acessível e disposto a
+  participar do desenho formativo? São duas condições: ter um contato disponível
+  não implica que ele participará desse desenho.
+- **Field Experiment:** há protótipo utilizável e é importante obter dados
+  objetivos numa situação em que usuários reais possam agir mais naturalmente?
+  Ligue essas condições à evidência pretendida, sem deduzir adequação do rótulo.
 
-Recomendações condicionais de escolha, não garantias de adequação ou protocolos de execução.
+### Julgar aspectos técnicos quando o uso real não é a via escolhida
 
-| Quadrante | Método | Condição relevante |
-|---|---|---|
-| Formativa artificial | Criteria-Based Evaluation | Critérios verificáveis por julgamento ou medida |
-| Formativa artificial | Scenarios | Situações de uso antecipáveis em uma árvore de decisões |
-| Formativa artificial | Prototype Demo | Protótipo de baixa fidelidade rapidamente apresentável a interessados |
-| Formativa artificial | Lab Experiment | Protótipo utilizável em uma tarefa controlada |
-| Formativa artificial | Theorem Proof | Artefato técnico representável matemática ou logicamente |
-| Formativa naturalística | Action Research | Usuário/cliente real acessível e disposto a participar do desenho formativo |
-| Formativa naturalística | Interview/Focus Group | Necessidade de percepções, opiniões ou sugestões detalhadas |
-| Formativa naturalística | Field Experiment | Protótipo utilizável e necessidade de dados objetivos em comportamento mais natural |
-| Formativa naturalística | Think Aloud Protocol Analysis | Protótipo utilizável e necessidade de retorno detalhado sobre aprendizado ou usabilidade |
-| Formativa naturalística | Qualitative Survey | Protótipo utilizável e retorno de problemas/sugestões de um grupo maior |
-| Somativa artificial | Lab Experiment | Protótipo utilizável; evidência de efetividade em uso real não é essencial ao episódio |
-| Somativa artificial | Optimisation Analysis | Artefato técnico cuja eficiência é central |
-| Somativa artificial | Testing | Software cujo funcionamento e saídas corretas são essenciais |
-| Somativa artificial | Role Playing Simulation | Uso organizacional inviável, mas interação entre papéis é importante |
-| Somativa artificial | Computer Simulation | Situação real inviável ou arriscada; sistema e uso podem ser modelados e executados |
-| Somativa naturalística | Quantitative Survey | Características percebidas e necessidade de evidência estatística para uma teoria de design |
-| Somativa naturalística | Participant Observation | Experiência difícil de expressar; a regra do artigo a associa a exigência menor de rigor |
-| Somativa naturalística | Pilot Study | Acesso limitado a uma implementação, por exemplo, a um ensaio de baixo risco |
-| Somativa naturalística | Field Study or Case Study | Acesso à implementação e necessidade de evidência abrangendo a organização |
-| Somativa naturalística | Ethnography | Acesso à implementação, uso prolongado/conhecimento profundo e alta exigência de rigor |
+Fundamento das condições: Baskerville, Pries-Heje e Venable (2026), DSREMSF,
+DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+Estas são as demais alternativas SA; a posição SA de Lab Experiment foi
+separada de sua posição FA acima.
 
-A posição na matriz admite adaptações entre finalidade formativa e somativa. Uma adaptação exige justificar finalidade, ambiente e
-evidência; não basta trocar o rótulo. O rigor depende do desenho concreto e das
-conclusões pretendidas, não apenas do nome do método.
+- **Testing:** o artefato é predominantemente software e é essencial conferir
+  funcionamento e saídas corretos? Testes podem observar o comportamento externo
+  (funcional/caixa-preta) ou a estrutura interna (estrutural/caixa-branca).
+- **Optimisation Analysis:** o artefato é puramente técnico e eficiência elevada
+  é essencial? A exigência conjunta sustenta a alternativa; eficiência apenas
+  desejável não é a condição apresentada pelos autores.
+- **Computer Simulation:** o emprego em situação real é inviável, por exemplo
+  pelo risco, mas sistema e uso podem ser modelados e o modelo executado? A
+  justificativa precisa explicar essa possibilidade de representação e execução.
+- **Role Playing Simulation:** usar o artefato numa organização real é inviável,
+  mas compreender a interação entre papéis é importante? Explicite por que essas
+  interações precisam fazer parte da avaliação simulada.
 
-## Short-scoping e sinergias
+### Julgar a solução com evidência de sua utilização
 
-Short-scoping ajusta o método ao trabalho necessário para examinar o efeito prático
-do artefato com o rigor requerido. Pode reaproveitar a definição do problema e o
-planejamento já feitos na DSR, dispensar análises ou teorização desnecessárias ao
-objetivo e limitar variáveis medidas ao efeito investigado. Reduzir participantes
-ou o escopo/realismo de uma tarefa é uma possibilidade condicionada à suficiência
-da evidência. É especialmente pertinente em avaliações formativas; em somativas,
-depende das exigências dos destinatários da evidência.
+Fundamento das condições: Baskerville, Pries-Heje e Venable (2026), DSREMSF,
+DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+As cinco alternativas SN diferem quanto à evidência e ao acesso necessários.
 
-Há duas sinergias: escolher um método que cubra vários objetivos/propriedades e
-planejar um episódio que reúna avaliações antes separadas. Um episódio formativo
-deve produzir a informação específica necessária para decidir como prosseguir,
-com rigor suficiente para confiar nessa decisão.
+- **Pilot Study:** o acesso permite implementar a solução somente em parte da
+  organização? Um piloto é candidato para esse acesso limitado, como num ensaio
+  de baixo risco. O exemplo não cria requisito universal de risco baixo.
+- **Field Study or Case Study:** há acesso pleno à implementação na organização
+  e importa reunir evidência que a abranja? Essa dupla condição distingue a
+  recomendação de um piloto com acesso limitado.
+- **Ethnography:** além de acesso pleno à implementação, o uso exige conhecimento
+  aprofundado e prolongado, e a evidência precisa de rigor elevado? A recomendação
+  depende desse conjunto, não apenas de passar mais tempo no local.
+- **Quantitative Survey:** características percebidas são importantes e avaliar
+  uma teoria de design requer evidência estatística? São as duas necessidades
+  que fundamentam considerar a alternativa.
+- **Participant Observation:** busca-se compreensão profunda da experiência,
+  difícil de os interessados expressarem, e a exigência de rigor não é alta?
+  Esse é o conjunto dos autores; não significa que observação seja sempre pouco
+  rigorosa ou adequada a qualquer finalidade.
 
-Nesta suíte, uma proposta de corte explicita escopo original, alteração,
-justificativa, economia esperada, consequências para rigor/cobertura, riscos e
-decisão do pesquisador. Esse registro é uma convenção operacional da suíte.
+Alguns métodos podem ser adaptados a outros quadrantes. Justifique finalidade,
+ambiente e evidência a obter; mudar o rótulo não basta. O índice não fornece coleta,
+análise ou salvaguardas: desenhar o protocolo exige literatura própria do método.
+Rigor e força das conclusões dependem do desenho e da evidência, não do nome escolhido.
 
-## Limites da orientação
-MEDS complementa metodologias gerais de DSR;
-não fornece um fluxo de escrita/publicação nem limiares universais de qualidade. Ganho de eficiência não autoriza
-presumir suficiência de rigor ou generalizar conclusões além da evidência prevista.
+## Dimensionar o trabalho sem esconder a perda de cobertura
+
+Fundamento: short-scoping e sinergias em MEDS, de Baskerville, Pries-Heje e
+Venable (2026), DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+As perguntas de decisão e o exemplo hipotético são explicações da suíte.
+
+Uma avaliação deve responder à decisão que a motivou. Short-scoping permite
+ajustar o alcance do método a essa necessidade e ao rigor requerido para examinar
+os efeitos práticos do uso pretendido. Justifique por que o trabalho mantido ainda
+sustenta a decisão, não apenas quantas horas foram poupadas.
+
+Considere, somente como ilustração, a inspeção de alertas de um painel de sensores.
+Examinar alertas de pressão em vez de todos os tipos de alerta deixa os demais
+fora da cobertura. Isso pode ajudar a decidir um ajuste localizado, mas não permite
+concluir que o painel inteiro seja confiável. O exemplo não fornece fatos ou
+escolhas para o caso da pessoa.
+
+Ao propor um corte, examine as variáveis observadas e o número de participantes;
+a extensão e o realismo das tarefas; análises que a decisão não exige; e trabalho
+já realizado na DSR que não precisa ser repetido. Isso pode incluir reaproveitar
+a formulação do problema ou outras decisões, dispensar etapas redundantes e não
+desenvolver teorização ou análises desnecessárias ao episódio. Cada ajuste deve
+manter evidência suficiente. É um recurso especialmente pertinente à aprendizagem
+formativa. Em avaliação somativa, sua adequação também depende do rigor que os
+destinatários aceitam. Eficiência não justifica rigor insuficiente.
+
+Os autores também discutem quatro oportunidades: escolher método menos exigente
+em recursos que ainda alcance o rigor necessário; um mesmo método responder a
+mais de um objetivo ou propriedade; reunir avaliações antes separadas em um
+mesmo episódio; e usar em avaliação formativa rigor mínimo suficiente para confiar
+na próxima decisão. Se propriedades se relacionam, avaliá-las juntas deve preservar
+essas relações. A avaliação formativa precisa da informação específica para avançar.
+
+**Convenção da suíte:** registrar escopo original, proposta de corte, justificativa,
+economia esperada, consequências para rigor/cobertura, riscos residuais e decisão
+do pesquisador. Esse formato de registro não é uma ficha prescrita pelo artigo.
+Menos esforço não comprova manutenção da força das conclusões.
+
+## Inserção no projeto e limites do fundamento
+
+Fundamento: Baskerville, Pries-Heje e Venable (2026), incorporação e limites de
+MEDS, DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+Para a metodologia geral do projeto, ver Peffers et al. (2007), DSRM,
+DOI [10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302),
+explicada em [DSRM](dsrm.md).
+
+MEDS pode acompanhar uma metodologia geral sem substituí-la. Na formulação do
+projeto, antecipam-se objetivos, estratégia e propriedades iniciais; no design e
+desenvolvimento, refinam-se propriedades e episódios formativos; na preparação da
+demonstração e avaliação, planejam-se propriedades e episódios somativos pertinentes.
+A incorporação é flexível, sem dependência obrigatória entre passos de MEDS.
+Componentes distintos podem justificar estratégias distintas.
+
+Workshops, aplicação no Intelligrid e análise retrospectiva de estudos que usaram
+FEDS são tipos de evidência do artigo MEDS. Ilustram aplicação e sugerem benefícios;
+não equivalem a comparação direta com métodos rivais ou a limiares universais de
+qualidade. MEDS oferece apoio limitado para julgar clareza de constructos de teorias
+de design, artefatos intermediários como problemas e requisitos, e proof-of-use.
+Seu foco tampouco é a qualidade editorial da publicação. Eficiência deve continuar
+subordinada à utilidade do artefato e a rigor suficiente, mantendo as conclusões
+dentro da evidência obtida.
+
+## Referências utilizadas
+
+Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for
+Evaluation in Design Science. *European Journal of Information Systems, 35*(5),
+830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for
+Evaluation in Design Science Research. *European Journal of Information Systems,
+25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+
+Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A Design
+Science Research Methodology for Information Systems Research. *Journal of
+Management Information Systems, 24*(3), 45–77. DOI:
+[10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302).
+
+O [catálogo de fontes](fontes.md) distingue estas bases dos complementos sobre
+DSR, tipos de artefato e taxonomias. A bibliografia não substitui a fundamentação
+de cada escolha no contexto.
