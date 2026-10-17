@@ -23,10 +23,12 @@ def snapshot(folder):
             and ".result" not in p.relative_to(folder).parts}
 
 
-def run_case(suite, output, scenario, repetition, cli_version):
+def run_case(suite, output, scenario, repetition, cli_version, installed_plugin=False,
+             plugin_version=None):
     folder = output / f"{scenario['id']}-{repetition}"
     folder.mkdir()
-    shutil.copytree(suite / SKILL, folder / "skill")
+    if not installed_plugin:
+        shutil.copytree(suite / SKILL, folder / "skill")
     if scenario["plan"]:
         plan = (ROOT / "tests/behavior" / scenario["plan"]).read_text(encoding="utf-8")
         (folder / "plano-meds.md").write_text(plan + scenario.get("append", ""), encoding="utf-8")
@@ -34,9 +36,14 @@ def run_case(suite, output, scenario, repetition, cli_version):
     results.mkdir()
     if scenario["plan"]:
         shutil.copy2(folder / "plano-meds.md", results / "plan-before.md")
-    prompt = ("Use a skill meds-suite lendo primeiro skill/SKILL.md e os recursos "
-              "pertinentes. Este é um exercício fictício isolado; trabalhe somente "
-              "nesta pasta. Não consulte outras instalações da skill.\n\n" + scenario["prompt"])
+    if installed_plugin:
+        prefix = ("Use $meds-suite instalado nesta sessão nova. Este é um exercício "
+                  "isolado; trabalhe somente nesta pasta.\n\n")
+    else:
+        prefix = ("Use a skill meds-suite lendo primeiro skill/SKILL.md e os recursos "
+                  "pertinentes. Este é um exercício fictício isolado; trabalhe somente "
+                  "nesta pasta. Não consulte outras instalações da skill.\n\n")
+    prompt = prefix + scenario["prompt"]
     (results / "prompt.txt").write_text(prompt, encoding="utf-8")
     before = snapshot(folder)
     command = ["codex", "exec", "--ephemeral", "--sandbox", "workspace-write",
@@ -61,7 +68,10 @@ def run_case(suite, output, scenario, repetition, cli_version):
     receipt = {
         "scenario": scenario["id"], "repetition": repetition, "started_utc": started,
         "finished_utc": datetime.now(timezone.utc).isoformat(), "suite": str(suite),
-        "skill_sha256": before["skill/SKILL.md"], "cli": cli_version,
+        "skill_sha256": (hashlib.sha256((suite / SKILL / "SKILL.md").read_bytes()).hexdigest()
+                         if installed_plugin else before["skill/SKILL.md"]),
+        "execution_mode": "installed-plugin" if installed_plugin else "copied-skill",
+        "plugin_version": plugin_version, "cli": cli_version,
         "platform": f"{platform.system()} {platform.release()} {platform.machine()}", "command": command,
         "model_observed": model.group(1) if model else None, "exit_code": exit_code,
         "before": before, "after": after, "changed_files": changed,
@@ -78,7 +88,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--suite", type=Path, default=ROOT)
     parser.add_argument("--output", type=Path, required=True, help="Pasta nova, fora do pacote")
-    parser.add_argument("--scenario", help="Executar somente este cenário")
+    parser.add_argument("--installed-plugin", action="store_true",
+                        help="Usar o plugin instalado e confirmar sua versão antes das sessões")
+    parser.add_argument("--scenario", action="append", dest="scenario_ids",
+                        help="Executar somente este cenário; pode ser repetido")
     args = parser.parse_args()
     suite, output = args.suite.resolve(), args.output.resolve()
     if output.is_relative_to(suite) or output.is_relative_to(ROOT):
@@ -88,16 +101,33 @@ def main():
     if output.exists():
         parser.error("use uma pasta de saída nova para não sobrescrever evidências")
     scenarios = json.loads((ROOT / "tests/behavior/cenarios.json").read_text(encoding="utf-8"))
-    if args.scenario:
-        scenarios = [s for s in scenarios if s["id"] == args.scenario]
-        if not scenarios:
-            parser.error("cenário desconhecido")
+    if args.scenario_ids:
+        known_ids = {s["id"] for s in scenarios}
+        unknown = set(args.scenario_ids) - known_ids
+        if unknown:
+            parser.error("cenário desconhecido: " + ", ".join(sorted(unknown)))
+        selected_ids = set(args.scenario_ids)
+        scenarios = [s for s in scenarios if s["id"] in selected_ids]
     cli = subprocess.run(["codex", "--version"], capture_output=True, text=True, check=True).stdout.strip()
+    plugin_version = None
+    if args.installed_plugin:
+        manifest = json.loads((suite / "plugins/meds-suite/.codex-plugin/plugin.json").read_text(encoding="utf-8"))
+        installed = subprocess.run(["codex", "plugin", "list", "--json"], capture_output=True,
+                                   text=True, check=True)
+        plugin_data = json.loads(installed.stdout)
+        match = next((item for item in plugin_data.get("installed", [])
+                      if item.get("pluginId") == "meds-suite@meds-local" and item.get("enabled")), None)
+        if not match:
+            parser.error("meds-suite@meds-local não está instalado e habilitado")
+        plugin_version = match.get("version")
+        if plugin_version != manifest.get("version"):
+            parser.error(f"plugin instalado v{plugin_version} não corresponde à suíte v{manifest.get('version')}")
     output.mkdir(parents=True)
     # Os critérios e respostas humanas previstas não entram nos prompts do modelo.
     jobs = [(s, n) for s in scenarios for n in range(1, s["repetitions"] + 1)]
     with ThreadPoolExecutor(max_workers=3) as pool:
-        futures = [pool.submit(run_case, suite, output, s, n, cli) for s, n in jobs]
+        futures = [pool.submit(run_case, suite, output, s, n, cli,
+                               args.installed_plugin, plugin_version) for s, n in jobs]
         receipts = [future.result() for future in futures]
     (output / "summary.json").write_text(json.dumps(receipts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return int(any(r["exit_code"] or not r["response_present"] or r["read_only_preserved"] is False for r in receipts))

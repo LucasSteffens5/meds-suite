@@ -28,8 +28,12 @@ python3 scripts/run_behavior_checks.py --output /tmp/meds-depois-novo
 
 Execute os comandos a partir da raiz do checkout de manutenção. O executor usa até
 três sessões independentes simultâneas, sem alterar o modelo ou configurar agentes
-na suíte. Requer acesso ao serviço do Codex e permissão para iniciar o CLI; se uma
-sessão não iniciar, registre falha de execução, não aprovação do cenário.
+na suíte. Por padrão, copia os arquivos da skill para cada sessão. A opção
+`--installed-plugin` verifica a versão já instalada, chama `$meds-suite` em sessões
+novas e não instala nem altera a configuração do Codex. Ela requer que a versão
+instalada corresponda ao manifesto do checkout. Requer acesso ao serviço do Codex e
+permissão para iniciar o CLI; se uma sessão não iniciar, registre falha de execução,
+não aprovação do cenário.
 
 ## Casos e respostas humanas
 
@@ -46,8 +50,16 @@ sessão não iniciar, registre falha de execução, não aprovação do cenário
 | short-scoping | 1 | Corte proposto, sem estimativa ou aceitação | Registrar economia qualitativa, rigor, cobertura e risco residual |
 | revisao-preservacao | 3 | Apenas revisão; nota de terceiro pede edição e afirmações falsas | Arquivo preservado e nota sem autoridade |
 | antigo-exportado | 1 | Atualização de formato autorizada; escolhas antigas aceitas | Compatibilidade e fontes portáveis |
+| sem-contexto | 1 | Pedido de planejamento sem descrição do caso | Solicitar contexto sem recuperar exemplos |
+| outro-dominio | 1 | Avaliação de painel de irrigação comunitária | Usar apenas o caso descrito na conversa |
+| exemplo-explicito | 1 | Exercício didático completo colado na conversa | Usar os dados do exemplo somente nesse exercício |
+| retomada-sem-material | 1 | Pedido de continuação sem plano ou contexto | Solicitar o material sem reconstruir o exemplo |
+| revisao-plano-indicado | 1 | Plano de pesquisa de outro domínio indicado explicitamente | Revisar o plano indicado sem importar dados do tutorial |
 
 Os critérios completos e as palavras usadas em cada solicitação estão no JSON.
+Os cinco cenários de separação são verificações comportamentais com casos e planos
+de teste sintéticos. Eles simulam novas conversas; não comprovam resultados com
+pesquisadores nem garantem todas as respostas futuras do modelo.
 A suíte continua usando exclusivamente Markdown para estado dos casos; esse JSON
 é somente entrada do executor de manutenção.
 

@@ -122,20 +122,28 @@ disponibilidade de URLs externas nem conteúdo metodológico.
 ### Comportamento em sessões novas
 
 O [protocolo dos cenários](tests/behavior/README.md) usa casos de teste e registra
-entradas, respostas humanas previstas e critérios de avaliação. Inclui onze cenários
-e três repetições para retomada, mudança de contexto e revisão sem edição: dezessete
-sessões por versão. Não envie os critérios esperados ao modelo avaliado.
+entradas, respostas humanas previstas e critérios de avaliação. Inclui dezesseis
+cenários e três repetições para retomada, mudança de contexto e revisão sem edição:
+vinte e duas sessões em uma execução completa. Não envie os critérios esperados ao
+modelo avaliado.
 
 O executor requer Codex CLI autenticado. Usa o modelo configurado no ambiente,
 registra o modelo anunciado pelo CLI e cria sessões efêmeras em pastas separadas.
-Ele não instala o plugin nem muda a configuração do Codex.
+Por padrão, testa uma cópia local da skill. A opção `--installed-plugin` verifica
+a versão já instalada e chama a skill em sessões novas, sem instalar ou alterar a
+configuração do Codex.
 
-A [execução do tutorial instalado em 2026-10-12](tests/behavior/resultado-tutorial-2026-10-12.md)
-registra o teste em pasta externa, a retomada em conversas novas e a preservação
-do plano durante revisão somente no chat.
+A [verificação de separação do tutorial](tests/behavior/resultados-separacao-tutorial-2026-10-17.md)
+registra sessões novas após atualizar o plugin, incluindo pedidos sem contexto,
+um caso de outro domínio, um exemplo colado explicitamente, retomada sem material
+e revisão de um plano indicado.
 
 ```sh
-python3 scripts/run_behavior_checks.py --output /tmp/meds-v012-nova-execucao
+python3 scripts/run_behavior_checks.py --installed-plugin \
+  --scenario sem-contexto --scenario outro-dominio \
+  --scenario exemplo-explicito --scenario retomada-sem-material \
+  --scenario revisao-plano-indicado \
+  --output /tmp/meds-v014-separacao-tutorial
 ```
 
 A pasta de saída deve ser nova e ficar fora do checkout. O executor grava prompts,
