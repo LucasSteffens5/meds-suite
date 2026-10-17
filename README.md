@@ -37,7 +37,7 @@ pesquisa e descreva o caso que deseja planejar:
 Use $meds-suite para planejar a avaliação do meu artefato. Vou descrever o caso e as informações disponíveis.
 ```
 
-Para aprender com o exercício fictício, use o [tutorial do repositório](docs/primeiro-contato/README.md) . O plano desse exercício ficará na pasta do projeto aberto no Codex; ele não é um caso real de pesquisa.
+Para aprender a planejar uma avaliação, uma pergunta por vez, use o [tutorial do repositório](docs/primeiro-contato/README.md).
 
 ## Arquitetura
 

@@ -1,107 +1,102 @@
-# Tutorial MEDS para copiar no chat
+# Aprenda a planejar uma avaliação, uma pergunta por vez
 
-Para usá-lo,abra uma conversa no Codex na pasta em que deseja salvar o plano e cole a mensagem
-de contexto abaixo. O caso é fictício e serve somente ao exercício explicitamente
-identificado. Os outros casos da sua pesquisa devem vir da conversa ou do plano que
-você indicar.
+Com a MEDS Suite, você transforma a ideia do seu projeto em um plano de avaliação,
+decidindo cada etapa com ajuda da conversa.
 
-## Fundamento do exercício
+## Começar
 
-A sequência de objetivos, estratégia, propriedades, episódios e short-scoping
-segue Baskerville, Pries-Heje e Venable (2026), DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
-As estratégias e os eixos de avaliação FEDS seguem
-Venable, Pries-Heje e Baskerville (2016), DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
-Os fatos, restrições e dados abaixo foram criados para este exercício. As fontes
-fundamentam os conceitos, sem fornecer decisões para o caso.
-
-## Contexto do exercício
-
-Copie o bloco inteiro para iniciar. Ele fornece o caso e pede que a suíte conduza
-o aprendizado sem impor respostas prontas:
-
+Com a suíte instalada, abra uma conversa no Codex na pasta em que deseja salvar o
+plano. Copie e envie a mensagem abaixo.
 ```text
-Use $meds-suite para me ensinar MEDS. Quero planejar
-a avaliação de um protótipo que ajuda estudantes a encontrar documentos
-acadêmicos por título e etiqueta. A busca ignora maiúsculas e minúsculas. O risco
-técnico principal é retornar documentos errados. Rótulos pouco claros também
-podem dificultar a busca.
+Use $meds-suite para me ensinar a planejar uma avaliação com este exercício.
 
-O prazo do exercício é de duas semanas, com até duas horas para avaliação e sem
-verba adicional. O acesso a estudantes e ao contexto real ainda não foi confirmado.
-Use dados sintéticos não colete documentos pessoais nem meça notas. Os resultados
-abaixo são expectativas de teste, não resultados observados. A questão de pesquisa,
-os critérios de clareza da interface e o protocolo de execução continuam sem
-definição.
+O protótipo ajuda estudantes a encontrar documentos acadêmicos usando palavras do
+título. Estes são os documentos disponíveis:
+- Calendário acadêmico
+- Guia de matrícula
+- Modelo de relatório
+- Guia de relatório
 
-| Cenário | Consulta | IDs esperados | Cobertura |
-|---|---|---|---|
-| S1 | calendário | D1 | Palavra no título |
-| S2 | matrícula | D2 | Palavra no título |
-| S3 | escrita | D3, D4 | Correspondências múltiplas |
-| S4 | estágio | Nenhum | Sem correspondência |
-| S5 | CALENDÁRIO | D1 | Maiúsculas e minúsculas |
-| S6 | guia | D2, D4 | Várias correspondências |
+A busca ignora diferenças entre letras maiúsculas e minúsculas. As expectativas
+para os testes são:
+- buscar “calendário” deve mostrar Calendário acadêmico;
+- buscar “matrícula” deve mostrar Guia de matrícula;
+- buscar “relatório” deve mostrar Modelo de relatório e Guia de relatório;
+- buscar “estágio” não deve mostrar nenhum documento;
+- buscar “CALENDÁRIO” também deve mostrar Calendário acadêmico;
+- buscar “guia” deve mostrar Guia de matrícula e Guia de relatório.
 
-D1 é “Calendário acadêmico”, etiqueta planejamento; D2 é “Guia de matrícula”,
-etiqueta secretaria; D3 é “Modelo de relatório”, etiqueta escrita; D4 é “Guia de
-relatório”, etiqueta escrita.
+Essas são expectativas, não resultados observados. O principal risco técnico é a
+busca mostrar documentos errados. O prazo é de duas semanas, com até duas horas
+para avaliação e sem verba adicional. Ainda não sabemos se teremos acesso a
+estudantes ou ao contexto real. Use dados inventados; não colete documentos
+pessoais nem avalie notas. A pergunta da pesquisa, os critérios para saber se a
+tela é clara e como os testes serão realizados ainda estão em aberto.
 
-Conduza objetivos da avaliação, estratégia, prioridades e episódios
-com métodos candidatos em etapas curtas. Explique os conceitos quando
-forem necessários e faça no máximo uma pergunta por resposta. Peça minha decisão
-em cada etapa; mantenha propostas como propostas e lacunas como pendências até eu
-responder. Não invente uma resposta correta para este exercício. Salve o plano em
-casos/tutorial-meds/plano-meds.md, relativo a esta pasta do projeto. Não atribua suas decisões ou resultados a outra pesquisa.
+Conduza o planejamento em etapas curtas e faça no máximo uma pergunta por
+resposta. Explique cada conceito em palavras simples antes de usar o nome do
+método. Mantenha suas sugestões como propostas e as informações ausentes como
+pendências até eu decidir ou responder. Não invente uma resposta certa para este
+exercício.Salve o plano em casos/tutorial-meds/plano-meds.md, dentro desta pasta do projeto.
 ```
 
-## Continuar o planejamento
+Responda à pergunta da suíte para continuar. Se a conversa for interrompida, envie:
+“Continue o planejamento deste exercício. Leia o plano salvo, preserve minhas
+decisões e pendências e faça somente a próxima pergunta necessária.”
 
-Depois de responder à pergunta da suíte, cole esta mensagem para avançar no caso:
+O plano ficará em `casos/tutorial-meds/plano-meds.md`, dentro da pasta que você
+abriu no Codex.
 
-```text
-Continue o planejamento deste exercício MEDS. Leia o plano salvo, preserve o que
-aceitei, mostre a próxima decisão que depende de mim e faça somente uma pergunta.
-Não complete lacunas usando exemplos ou casos de outros arquivos.
-```
+## O que você vai praticar
 
-O exercício passa por objetivos de avaliação, estratégia e trajetória FEDS,
-priorização das propriedades com MuSCoW e escolha de episódios e métodos com
-DSREMSF. Decida cada item com base nas informações do caso e no que você aceitar.
-Os termos do protótipo ajudam a praticar o método; não são respostas universais.
+Baskerville, Pries-Heje e Venable (2026) apresentam a MEDS como um caminho para
+organizar a avaliação: primeiro, definir o que se quer descobrir; depois, escolher
+uma abordagem; decidir quais características do artefato avaliar; e planejar as
+ocasiões de avaliação, chamadas episódios. A suíte ajuda a tomar essas decisões
+em etapas, e cada escolha pode ser revista ([MEDS, DOI
+10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280)).
 
-## Retomar com mudança de prazo
+Venable, Pries-Heje e Baskerville (2016) apresentam a FEDS, que ajuda a escolher
+como organizar as avaliações conforme os riscos, os recursos e as evidências
+necessárias ([FEDS, DOI 10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36)).
+A suíte ajuda a ordenar o que precisa ser avaliado (MuSCoW) e a escolher métodos
+adequados para cada avaliação (DSREMSF). Você não precisa decorar esses nomes
+para começar.
 
-Após concluir o primeiro planejamento, use este cenário de prática para discutir
-short-scoping.
+## Exercícios opcionais
 
-```text
-Continue o exercício. Houve uma mudança: agora restam três dias para a
-avaliação, e o acesso a estudantes continua sem confirmação. Proponha alternativas
-para reduzir o escopo e explique o efeito de cada uma sobre cobertura, rigor e
-conclusões. Pode considerar, como uma possibilidade, limitar os testes de busca
-a S1–S3; deixe explícito que S4–S6 não seriam cobertos. Não aplique nem aceite um
-corte sem minha decisão. Faça uma pergunta.
-```
-
-## Revisar o plano do exercício
-
-Para revisar sem editar o arquivo, cole:
+Depois de concluir o primeiro plano, você pode praticar como ajustar o trabalho
+quando o tempo diminui. A MEDS chama esse ajuste de *short-scoping* (Baskerville,
+Pries-Heje e Venable, 2026, [DOI 10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280)).
+Cole esta mensagem:
 
 ```text
-Revise a coerência do plano do exercício MEDS salvo em
-casos/tutorial-meds/plano-meds.md. Examine os vínculos entre objetivos, estratégia,
-propriedades, episódios e conclusões, considerando apenas decisões aceitas e
-pendências registradas no plano. Apresente recomendações no chat e não edite o
-arquivo.
+Continue o exercício. Agora restam três dias para a avaliação, e o acesso a
+estudantes continua sem confirmação. Proponha opções para reduzir a quantidade
+de buscas avaliadas. Para cada opção, explique o que deixará de ser testado e
+como isso limita as conclusões. Considere testar apenas as buscas por “calendário”,
+“matrícula” e “relatório”; deixe claro que as buscas por “estágio”, “CALENDÁRIO”
+e “guia” ficariam de fora. Não aplique nenhuma mudança sem minha decisão. Faça
+uma pergunta.
 ```
 
-Se você pedir para continuar este tutorial em outra conversa, envie o contexto do
-exercício ou indique o plano salvo. Sem esse material, a suíte pedirá que você o
-forneça em vez de reconstruir o exemplo.
+Você também pode pedir uma revisão sem alterar o plano:
 
+```text
+Revise o plano deste exercício. Verifique se o que quero descobrir, a abordagem
+escolhida, as características que pretendo avaliar e as etapas planejadas combinam
+entre si. Considere apenas decisões que aceitei e informações que ainda estão
+pendentes. Sugira melhorias no chat sem editar o arquivo.
+```
+
+## Planejar seu próprio projeto
+
+Para começar seu caso, abra uma nova conversa do Codex na pasta do projeto da
+pesquisa e descreva o artefato, o problema que ele resolve e as informações que
+você já tem. Use `$meds-suite` para iniciar o planejamento; a suíte ajudará a
+identificar a próxima decisão e registrar o que ainda falta saber.
 
 ## Referências
 
 - Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
-
 - Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
