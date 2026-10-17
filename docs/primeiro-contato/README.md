@@ -5,6 +5,15 @@ de contexto abaixo. O caso é fictício e serve somente ao exercício explicitam
 identificado. Os outros casos da sua pesquisa devem vir da conversa ou do plano que
 você indicar.
 
+## Fundamento do exercício
+
+A sequência de objetivos, estratégia, propriedades, episódios e short-scoping
+segue Baskerville, Pries-Heje e Venable (2026), DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+As estratégias e os eixos de avaliação FEDS seguem
+Venable, Pries-Heje e Baskerville (2016), DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+Os fatos, restrições e dados abaixo foram criados para este exercício. As fontes
+fundamentam os conceitos, sem fornecer decisões para o caso.
+
 ## Contexto do exercício
 
 Copie o bloco inteiro para iniciar. Ele fornece o caso e pede que a suíte conduza
@@ -89,3 +98,10 @@ arquivo.
 Se você pedir para continuar este tutorial em outra conversa, envie o contexto do
 exercício ou indique o plano salvo. Sem esse material, a suíte pedirá que você o
 forneça em vez de reconstruir o exemplo.
+
+
+## Referências
+
+- Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+- Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).

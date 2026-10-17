@@ -62,6 +62,20 @@ o arquivo do exercício. Não reconstrua o exemplo a partir da memória.
 - Preserve a distinção entre objetivos do artefato, objetivos da avaliação,
   estratégia, quadrante de um episódio e método. As etapas podem ser revisitadas.
 
+## Atribuição nas respostas e nos planos
+
+O planejamento utiliza Baskerville, Pries-Heje e Venable (2026), MEDS, DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280); as estratégias e dimensões de avaliação utilizam Venable, Pries-Heje e Baskerville (2016), FEDS, DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36). Para situar atividades do projeto, consulte Peffers et al. (2007), DSRM, DOI [10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302).
+
+Abra cada seção conceitual com autores, ano, componente utilizado e DOI; repita
+quando mudar ou combinar fontes. Nas respostas do chat, atribua a primeira explicação
+substantiva e as mudanças de fundamento, sem repetir referências em perguntas
+meramente administrativas. Atribua junto a quadros e recomendações a seleção e os
+critérios dos autores. Perguntas de planejamento, IDs, registro de aceitação e
+continuidade são convenções da suíte; não os apresente como regras dos artigos.
+
+Use o [catálogo bibliográfico](references/fontes.md) para copiar metadados completos
+sem abreviar ou inventar dados.
+
 ## Saídas e legenda obrigatória
 
 Toda mensagem dirigida ao pesquisador termina com a legenda fixa abaixo, inclusive
@@ -103,3 +117,12 @@ Em pedidos de planejamento, salvar ou atualizar esse plano faz parte da entrega,
 salvo se o usuário pedir apenas conversa. Ao fim, informe o caminho salvo, a etapa
 atual e as pendências. Se a gravação não for possível, apresente o plano no chat e
 informe que não foi salvo. Em revisão, aplique os limites do fluxo Revisar.
+
+
+## Referências utilizadas
+
+- Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+- Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+
+- Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A Design Science Research Methodology for Information Systems Research. *Journal of Management Information Systems, 24*(3), 45–77. DOI: [10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302).

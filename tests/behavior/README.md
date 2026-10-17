@@ -4,6 +4,16 @@ Os [cenários](cenarios.json) e os planos [base](caso-base.md) e
 [antigo](caso-antigo.md) são fictícios. Seus registros de aceitação pertencem ao
 exercício; não representam decisões, participantes ou execução de uma pesquisa real.
 
+## Fundamento metodológico e convenções do teste
+
+Os conceitos MEDS, MuSCoW, DSREMSF e short-scoping são utilizados a partir de
+Baskerville, Pries-Heje e Venable (2026), DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+As estratégias e dimensões formativa/somativa e artificial/naturalística seguem
+Venable, Pries-Heje e Baskerville (2016), DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+Os cenários, critérios de preservação, recibos e procedimentos de comparação
+são escolhas de teste desta suíte; não são protocolos prescritos nesses artigos.
+Fontes metodológicas não estabelecem fatos ou decisões dos casos fictícios.
+
 ## Procedimento
 
 1. Preserve uma cópia da versão anterior antes de alterar suas instruções.
@@ -80,3 +90,10 @@ ou autorização observada; julgamento metodológico exige inspeção dos casos.
 O teste por leitura direta da skill não comprova sua descoberta como plugin no
 Codex Desktop. As respostas de um modelo e poucos casos não demonstram eficácia
 geral, independência do julgamento ou validade científica.
+
+
+## Referências
+
+- Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+- Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).

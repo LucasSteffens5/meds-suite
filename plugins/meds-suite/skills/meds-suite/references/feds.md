@@ -1,131 +1,83 @@
-# FEDS: estratégia, trajetória e desenho da avaliação
+# FEDS: decidir a estratégia e organizar a evidência
 
-Síntese original de Venable, J., Pries-Heje, J., & Baskerville, R. (2016).
-*FEDS: a Framework for Evaluation in Design Science Research*. European Journal
-of Information Systems, 25(1), 77–89. Publicação antecipada online em 2014;
-2016 é o ano da edição.
-DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+Esta referência apresenta explicações redigidas para a suíte a partir do FEDS de Venable, Pries-Heje e Baskerville (2016), DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36). As distinções, estratégias e condições de escolha são dos autores; as perguntas usadas aqui organizam sua consulta e não constituem um novo framework. O artigo saiu antecipadamente em 2014 e integra a edição de 2016.
 
-FEDS orienta **por que, quando, como e o que avaliar** em DSR. Considera tanto a
-utilidade do artefato em seu ambiente quanto a qualidade da contribuição de
-conhecimento, incluindo evidência sobre teorias de design. Combina um quadro de
-estratégias e trajetórias com um processo de quatro passos para desenhar avaliações.
+FEDS permite relacionar a evidência que o projeto precisa produzir às escolhas de finalidade, ambiente, momento e objeto da avaliação. Sua contribuição inclui tanto estratégias para encadear avaliações quanto um processo de planejamento. O resultado pretendido não se limita à utilidade do artefato: compreende também a qualidade do conhecimento produzido e a sustentação de teorias de design.
 
-## Finalidade, ambiente e momento
+## Que conclusão cada episódio permitirá?
 
-**Formativa** fornece uma base para aperfeiçoar o artefato e decidir como prosseguir.
-**Somativa** julga em que medida os resultados atendem às expectativas, requisitos
-ou padrões, por exemplo, para adoção, certificação ou aprovação de continuidade.
-A distinção é pela finalidade, não pelo conteúdo ou pela mecânica do método. Uma
-mesma atividade pode produzir evidência útil às duas finalidades.
+Fundamento: Venable, Pries-Heje e Baskerville (2016), DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36). As perguntas abaixo articulam dimensões distintas do FEDS; uma resposta não determina automaticamente as outras.
 
-**Artificial** abstrai ou se afasta de uma ou mais condições reais: pessoas
-usuárias, sistema ou problema/tarefa. Pode ser empírica, como experimentos de
-laboratório e simulações, ou não empírica, como argumentos teóricos e provas
-matemáticas. **Naturalística** examina o artefato em seu ambiente real de uso,
-considerando pessoas usuárias reais, sistema real e problema/tarefa reais em um
-contexto real. É sempre empírica. Usuários reais executando uma tarefa fictícia
-não bastam para tornar uma avaliação naturalística; o artigo ilustra esse caso
-como artificial. O nome do método tampouco resolve a classificação.
-Uma prova matemática é artificial e não empírica; seu uso para aperfeiçoar ou
-julgar o artefato é que determina sua finalidade formativa ou somativa.
+- **Para melhorar ou para julgar?** Quando a evidência orienta mudanças e próximos passos, a finalidade é formativa. Quando permite julgar resultados perante requisitos, padrões ou expectativas — inclusive adoção, certificação e autorização de continuidade — a finalidade é somativa. A atividade e seu conteúdo podem ser os mesmos: a finalidade depende do uso da evidência, que pode atender às duas funções.
+- **Quais condições de uso estão presentes?** Uma avaliação naturalística reúne pessoas usuárias, sistema e problema/tarefa reais no contexto real de utilização; é empírica. Uma avaliação artificial afasta ou abstrai pelo menos uma dessas condições. Pessoas reais executando tarefa fictícia continuam sendo um caso artificial, como exemplificado pelos autores. Experimentos em laboratório e simulações podem gerar evidência empírica artificial; argumentos teóricos e provas matemáticas são artificiais e não empíricos. Nem o nome do método nem a presença de participantes bastam para decidir o ambiente. Uma prova matemática pode orientar uma melhoria ou sustentar um julgamento; ser artificial e não empírica não determina sua finalidade.
+- **Em relação a qual atividade se define o momento?** Ex ante antecede a escolha, aquisição, design ou construção; ex post sucede aquisição, desenvolvimento ou implementação. Há avaliações intermediárias. Essa cronologia deve indicar a atividade de referência: aprovar a continuidade de uma proposta pode ser um julgamento somativo ex ante ou intermediário; melhorar um artefato já implementado pode ser avaliação formativa ex post.
 
-Os eixos formativa/somativa e artificial/naturalística são **contínuos e
-independentes**. Uma trajetória combina episódios ao longo do projeto; os quatro
-quadrantes ajudam a situá-los, sem esgotar posições intermediárias ou usos mistos
-da evidência. Avaliações artificiais e naturalísticas podem servir a qualquer uma
-das duas finalidades.
+Formativa/somativa e artificial/naturalística constituem **dois contínuos independentes**. Os quatro quadrantes auxiliam a localização dos episódios, mas não eliminam posições intermediárias nem usos mistos. O momento pertence a outra distinção. Assim, qualquer ambiente pode servir a ambas as finalidades, e a cronologia não permite inferi-las.
 
-O momento é uma distinção separada: **ex ante**, antes da escolha, aquisição,
-design ou construção; **intermediário**, durante esse percurso; e **ex post**,
-após aquisição, desenvolvimento ou implementação. Indique a atividade em relação
-à qual o momento é definido. Uma avaliação somativa pode ser ex ante ou
-intermediária, como ao julgar uma proposta para aprovar sua continuidade; uma
-avaliação ex post pode ser formativa, ao orientar melhorias no artefato implementado.
+A questão causal e a questão de uso também precisam ser distinguidas. **Eficácia** pede evidência de que o benefício decorre do artefato, e não de outros fatores; **efetividade** pede evidência de que esse benefício ocorre e se sustenta nas condições reais, com adoção e relações sociais. Abstrair condições pode facilitar controle de confundidores, repetição e atribuição causal, frequentemente com menor custo, mas reduzir realismo e alcance das conclusões. O uso real permite examinar efetividade, enquanto confundidores, complexidade e custos dificultam separar efeitos. Essas vantagens não dispensam desenho rigoroso em nenhum ambiente.
 
-**Eficácia** examina se o benefício decorre do artefato, isolando outros fatores;
-**efetividade** examina se o benefício se mantém em uso real, incluindo adoção e
-contexto social. Avaliações artificiais costumam favorecer controle de
-confundidores, repetibilidade e atribuição causal, frequentemente com menor custo;
-sua abstração pode limitar a correspondência com o uso real e a generalização.
-Avaliações naturalísticas favorecem realismo e evidência de efetividade, mas a
-complexidade, os confundidores e os custos podem dificultar a interpretação e a
-atribuição dos efeitos. Nenhum ambiente garante rigor por si só; as conclusões
-dependem do desenho e da evidência obtida.
+## Quais riscos e recursos devem orientar a trajetória?
 
-## Estratégias arquetípicas
+Fundamento das quatro estratégias e de suas condições: Venable, Pries-Heje e Baskerville (2016), DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36). As perguntas reorganizam a exposição para apoiar a decisão. Não substituem as condições dos autores por uma pontuação nem estabelecem sequência obrigatória.
 
-| Estratégia | Quando considerar | Trajetória típica |
-|---|---|---|
-| Quick & Simple | Construção pequena **e** simples, com baixos riscos **e incertezas** sociais e técnicos | Pouca avaliação formativa e avanço rápido para somativa mais naturalística; poucos episódios, podendo haver apenas uma avaliação somativa |
-| Human Risk & Effectiveness | Risco principal social/de uso **e/ou** avaliação com usuários reais em seu contexto real relativamente barata diante dos recursos **e/ou** objetivo crítico de estabelecer rigorosamente benefício sustentado em situações reais e no longo prazo | Formativa cedo, possivelmente artificial, avançando rapidamente para formativa mais naturalística; depois somativa com foco no rigor da evidência de efetividade |
-| Technical Risk & Efficacy | Risco principal técnico **e/ou** avaliação com usuários, sistemas e contexto reais proibitivamente custosa **e/ou** objetivo crítico de estabelecer rigorosamente que o benefício se deve ao artefato, e não a outros fatores | Artificial formativa iterativa cedo, avançando para artificial somativa de eficácia; avaliações mais naturalísticas perto do fim |
-| Purely Technical Artefact | Artefato puramente técnico, sem aspectos sociais, não usado por nem afetando pessoas, **ou** aplicação humana tão distante que torne a avaliação naturalística irrelevante ou inviável no projeto | Semelhante a Quick & Simple, mas favorece avaliações artificiais em todo o percurso, com finalidades formativas e/ou somativas conforme os objetivos |
+### O projeto pode chegar rapidamente a um julgamento final?
 
-Essas condições são orientações contextuais. Custo é relativo aos recursos do
-projeto e pode envolver tempo, dinheiro, saúde ou vida. Construção simples com
-risco elevado não justifica Quick & Simple apenas pela simplicidade; descobrir
-falhas somente na avaliação final pode tornar essa trajetória arriscada. Ser
-software não implica ser puramente técnico. Na aplicação humana distante, verifique
-se usuários e contexto reais estão inacessíveis ou ainda não existem.
+Considere **Quick & Simple** somente quando a construção for pequena **e** simples, com riscos **e** incertezas baixos tanto no plano social quanto no técnico. A trajetória dedica pouco esforço à avaliação formativa e chega rapidamente a avaliações somativas mais naturalísticas. Pode ter poucos episódios, até mesmo um único episódio somativo. O ganho possível é concluir com menor custo; deixar a descoberta de problemas para o fim é inadequado diante de riscos relevantes. Simplicidade de construção, isoladamente, não satisfaz essas condições.
 
-As estratégias são protótipos, podem ser combinadas e revisitadas; outras são
-possíveis. Objetivos ou riscos distintos podem justificar combinações. Na suíte,
-elas também podem ser registradas por componente, conforme [MEDS](meds.md).
-No exemplo hospitalar do artigo, uma estratégia híbrida pode
-examinar primeiro o funcionamento técnico da tecnologia e depois a interação
-entre médicos com Human Risk & Effectiveness. A quantidade, o momento e a posição
-dos episódios dependem do projeto, sem sequência obrigatória nem exigência de
-passar pelos quatro quadrantes.
+### O desafio principal envolve pessoas ou benefício sustentado em uso real?
 
-## Processo original de quatro passos
+Considere **Human Risk & Effectiveness** se pelo menos uma destas condições ocorrer, admitindo sua combinação (**e/ou**): o risco predominante é social ou relacionado ao uso; avaliar com pessoas usuárias reais em seu contexto real é relativamente barato; ou demonstrar rigorosamente benefício duradouro em situações reais é objetivo crítico. A trajetória privilegia melhorias cedo: pode começar artificialmente, mas passa rapidamente a episódios formativos mais naturalísticos. Mais adiante, episódios somativos procuram estabelecer efetividade, incluindo a continuidade dos benefícios apesar das dificuldades sociais de adoção e uso.
 
-| Passo | Orientação operacional sintetizada do FEDS |
-|---|---|
-| 1. Explicitar objetivos | Considerar rigor (eficácia e efetividade), redução de incertezas/riscos, ética e eficiência. Definir a evidência necessária sobre utilidade, sustentação de teoria de design, comparação com alternativas/estado da arte, propriedades relevantes, efeitos indesejáveis e explicação de por que o artefato funciona ou não, conforme o projeto |
-| 2. Escolher estratégia(s) | Identificar e priorizar riscos de design; avaliar custo e acesso a usuários, sistemas e contexto reais diante dos recursos; considerar natureza do artefato, distância da aplicação humana e complexidade da construção; justificar a estratégia ou combinação e a trajetória |
-| 3. Determinar propriedades | Gerar candidatas e alinhá-las aos objetivos e à estratégia; selecionar conforme finalidade, contexto, estágio e riscos. Avaliações formativas iniciais tendem a focar menos propriedades, ligadas aos riscos prioritários, que avaliações somativas posteriores |
-| 4. Desenhar episódios | Identificar restrições e recursos escassos, como tempo, pessoas, orçamento e local; priorizar fatores essenciais, importantes, menos importantes, desejáveis ou irrelevantes; definir quantidade de episódios e quem fará o quê, quando e como |
+### É necessário isolar o funcionamento técnico ou o acesso ao uso real custa demais?
 
-Os objetivos podem competir. Avalie riscos técnicos e humanos cedo, quando
-praticável, para orientar o design antes de investimentos elevados. Considere os
-riscos da própria avaliação e do uso futuro, sobretudo em artefatos críticos para
-segurança; eficiência precisa equilibrar recursos com rigor, redução de riscos e
-ética. As seis necessidades de evidência acima são possibilidades a selecionar
-conforme o projeto, não uma lista obrigatória de avaliações.
+Considere **Technical Risk & Efficacy** quando ocorrer uma ou mais condições (**e/ou**): o maior risco é técnico; avaliar com pessoas usuárias, sistemas e contexto reais tem custo proibitivo; ou atribuir rigorosamente o benefício ao artefato, excluindo outras explicações, é objetivo crítico. O percurso começa com ciclos artificiais formativos, avança para julgamentos somativos artificiais de eficácia e envolve avaliações mais naturalísticas perto do final. Reduzir incerteza técnica e comprovar causalidade não equivale a demonstrar benefício sustentado no uso real.
 
-Exemplos de propriedades, como usabilidade, confiabilidade, desempenho ou ajuste
-organizacional, são inspiração contextual, não critérios universais. Os passos
-podem mudar de ordem e iterar: propriedades podem afetar a finalidade ou o
-ambiente escolhidos. FEDS já apresentava esse processo de quatro passos; [MEDS](meds.md)
-o desenvolve com MuSCoW, DSREMSF e short-scoping, detalhados naquela referência.
+### Há uso humano relevante e acessível no horizonte do projeto?
 
-## Evidência e limites
+Considere **Purely Technical Artefact** se o artefato for puramente técnico, sem aspectos sociais, sem ser usado por pessoas nem afetá-las, **ou** se a aplicação humana estiver tão distante que avaliar naturalisticamente seja irrelevante ou inviável no projeto. Na segunda possibilidade, usuários e contexto reais podem estar inacessíveis ou ainda não existir. Essa estratégia se aproxima de Quick & Simple, mas mantém a preferência por avaliações artificiais no percurso, com finalidade formativa e/ou somativa conforme os objetivos. Ser software não demonstra ausência de aspectos humanos.
 
-O artigo analisa retrospectivamente dois estudos existentes, GIST e o trabalho de
-Zhao e colaboradores, e relata a aplicação do quadro ao projeto Site-Storming.
-Esta aplicação é apresentada pelos autores como avaliação naturalística somativa
-do próprio FEDS, por sua utilidade no planejamento de um projeto DSR. As propostas
-de melhoria das análises retrospectivas são sugestões sobre o que poderia ter
-sido feito, não benefícios demonstrados por executar essas alternativas.
-Os autores reconhecem a limitação de poucos estudos e a necessidade de mais
-aplicações e avaliações com artefatos variados, inclusive estratégias híbridas.
+### Como comparar custos e combinar estratégias?
 
-Nome de estratégia ou trajetória não comprova rigor, eficácia ou efetividade.
-Conclusões sobre efetividade exigem evidência adequada de uso real; testes
-artificiais, por si só, não a estabelecem. Relatos incompletos não permitem
-concluir que episódios não mencionados deixaram de ocorrer.
+O custo das alternativas deve ser confrontado com os recursos efetivamente disponíveis: inclui tempo e dinheiro, mas também saúde ou vida. Uma opção acessível para um projeto pode ser inviável para outro. As quatro estratégias são protótipos revisáveis; outras trajetórias e combinações são possíveis quando objetivos e riscos diferem. Quantidade, momento e posição dos episódios dependem do projeto, sem obrigação de atravessar todos os quadrantes.
 
-## Aplicação na suíte
+Como ilustração bibliográfica, FEDS descreve uma tecnologia hospitalar destinada a estimular interação entre médicos: avaliar primeiro seu funcionamento técnico e depois o comportamento social pode justificar uma estratégia híbrida. Trata-se de exemplo dos autores, não de fatos de um caso da suíte nem de resultado demonstrado para outro artefato.
 
-Explique a relação entre contexto, objetivos, estratégia proposta e trajetória.
-Quando faltarem informações, mantenha alternativas e pendências. Não use o nome
-de um método como se fosse estratégia nem deduza finalidade pela cronologia.
+A possibilidade de registrar estratégias por componente é desenvolvida no MEDS de Baskerville, Pries-Heje e Venable (2026), DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280), apresentado em [MEDS](meds.md). A decomposição concreta e a aceitação de uma proposta dependem das informações do projeto.
 
-Para consultar DSREMSF, esta suíte registra uma **classificação principal** do
-episódio, justificando finalidade predominante e ambiente pelas condições previstas.
-Registre também usos complementares da evidência e condições parcialmente reais.
-Essa classificação discreta é uma convenção operacional da suíte; não transforma
-os contínuos de FEDS em categorias exclusivas nem garante adequação de um método.
-Consulte [MEDS](meds.md) para priorização de propriedades, seleção de métodos e
-ajuste de escopo; protocolos de execução exigem literatura específica do método.
+## Que decisões compõem o planejamento?
+
+Fundamento do processo de quatro passos e dos critérios abaixo: Venable, Pries-Heje e Baskerville (2016), DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36). A organização a seguir explicita o produto de cada decisão, mantendo a ordem do método; não estabelece um percurso sem retorno.
+
+1. **Objetivos: qual evidência falta?** Explicitar a finalidade de avaliar e os compromissos entre quatro objetivos: rigor, redução de incertezas/riscos, ética e eficiência. Rigor inclui atribuição causal (eficácia) e funcionamento real (efetividade); episódios somativos ajudam a julgar a contribuição de conhecimento, podendo ser necessários vários para aspectos ou contextos distintos. Avaliar cedo, quando praticável, permite corrigir riscos técnicos e humanos antes de investimentos elevados. A ética alcança os riscos da própria avaliação e do uso futuro, sobretudo em sistemas críticos para segurança; eficiência exige equilibrar recursos com os demais objetivos.
+
+   O projeto pode precisar de evidência sobre a utilidade no ambiente, a sustentação da teoria de design, a melhoria diante de alternativas/estado da arte, propriedades relevantes além da finalidade principal, efeitos indesejados e explicações de por que o artefato funciona ou falha. São seis necessidades possíveis, não seis avaliações obrigatórias. Essa enumeração é a sistematização da literatura apresentada por FEDS; não implica consulta direta, por esta referência, a cada trabalho citado pelos autores.
+
+2. **Estratégia: qual percurso atende a esses objetivos?** Priorizar riscos de design e considerar custo e acesso ao uso real, natureza do artefato, distância de sua aplicação humana e complexidade da construção. Justificar uma estratégia ou combinação pelas condições descritas acima, explicitando a trajetória pretendida.
+
+3. **Propriedades: o que precisa ser observado nesse percurso?** Gerar candidatas, examinar sua contribuição aos objetivos e selecioná-las conforme estratégia, finalidade, contexto, estágio e riscos. Uma avaliação formativa inicial tende a concentrar-se em menos propriedades e nos riscos prioritários; uma somativa posterior pode ampliar a cobertura. Usabilidade, confiabilidade, desempenho e ajuste organizacional são exemplos contextuais, não critérios universais. A diversidade entre processos e produtos impede impor uma lista única a todos os artefatos.
+
+4. **Episódios: como tornar o percurso viável?** Identificar restrições e recursos escassos, como tempo, pessoas, orçamento e local. Distinguir fatores essenciais, mais importantes, menos importantes, desejáveis e irrelevantes. Definir quantos episódios serão necessários e quem realizará o quê, quando e de que maneira.
+
+Essas decisões podem iterar e mudar de ordem: uma propriedade relevante pode alterar finalidade ou ambiente. FEDS já contém o processo de quatro passos. MEDS o desenvolve com priorização MuSCoW, seleção DSREMSF e short-scoping: Baskerville, Pries-Heje e Venable (2026), DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280). Consulte [MEDS](meds.md) para a aplicação desses recursos, sem confundir sua introdução com autoria do processo FEDS.
+
+## O que os estudos do artigo permitem concluir?
+
+Fundamento e limites relatados: Venable, Pries-Heje e Baskerville (2016), DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36). Os autores usam retrospectivamente os estudos GIST e Zhao e colaboradores, e aplicam FEDS ao planejamento do projeto Site-Storming. Classificam esta aplicação como avaliação naturalística somativa de FEDS por sua utilidade no planejamento DSR. As alterações sugeridas nas análises retrospectivas não foram executadas para demonstrar os benefícios que poderiam produzir.
+
+O conjunto limitado de estudos sustenta a necessidade reconhecida de novas aplicações e avaliações com artefatos variados, inclusive estratégias híbridas. Nomear uma estratégia não comprova rigor, eficácia ou efetividade. Evidência artificial, sozinha, não estabelece efetividade no uso real; relatos incompletos também não demonstram que episódios não relatados jamais ocorreram.
+
+## Como a suíte registra essas decisões?
+
+Bases metodológicas: FEDS de Venable, Pries-Heje e Baskerville (2016), DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36) e MEDS de Baskerville, Pries-Heje e Venable (2026), DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280). As instruções de registro abaixo são convenções operacionais da suíte, e não regras adicionais atribuídas aos artigos.
+
+Explique por que contexto e objetivos sustentam a estratégia e a trajetória propostas. Se faltarem informações, preserve alternativas e pendências. Não trate o nome de um método como estratégia e não infira finalidade a partir da cronologia.
+
+Para consultar DSREMSF, registre uma **classificação principal** por episódio, justificada pela finalidade predominante e pelas condições previstas de ambiente. Registre também usos complementares da evidência e condições apenas parcialmente reais. Essa escolha discreta serve à consulta operacional: não converte os contínuos FEDS em categorias exclusivas e não assegura adequação de um método.
+
+[MEDS](meds.md) reúne a priorização de propriedades, seleção de métodos e ajuste de escopo. O protocolo de execução depende da literatura específica de cada método; esta referência não o fornece.
+
+## Referências
+
+Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+
+Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).

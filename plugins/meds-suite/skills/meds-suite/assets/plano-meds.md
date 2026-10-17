@@ -97,6 +97,16 @@ Indique artigos, seções/páginas e materiais fornecidos usados nas justificati
 As referências metodológicas do plugin estão disponíveis por título e DOI;
 registre aqui os localizadores relevantes, sem presumir leitura humana das fontes.
 
+
+
+## Referências utilizadas
+
+- Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+- Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+
+Inclua outras referências completas somente quando forem utilizadas, por exemplo DSRM ao situar suas atividades. Esta bibliografia registra o fundamento metodológico; não declara leitura humana dos artigos nem decisões do caso.
+
 ## Legenda
 
 **Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, não passos de MEDS.

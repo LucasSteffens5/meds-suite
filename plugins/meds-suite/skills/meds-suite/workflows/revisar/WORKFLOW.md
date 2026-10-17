@@ -13,6 +13,9 @@ Se o plano estiver ausente, solicite seu caminho ou conteúdo.
 
 ## Análise
 
+Fundamentos: Baskerville, Pries-Heje e Venable (2026), MEDS, DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280), para objetivos, MuSCoW, DSREMSF e short-scoping; Venable, Pries-Heje e Baskerville (2016), FEDS, DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36), para estratégia, trajetória e dimensões. Os itens de conferência abaixo e a forma de registrar o parecer são organização operacional da suíte. Quando usar DSRM para situar o projeto, cite Peffers et al. (2007), DOI [10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302).
+
+
 - **Contexto e objetivos:** a finalidade e o tipo de artefato (produto/processo,
   técnico/sociotécnico) estão claros? Sua criticidade de segurança foi considerada?
   Os objetivos da avaliação atendem à finalidade e aos destinatários da evidência?
@@ -55,6 +58,9 @@ amostra ou limiar universal. Não simule parecer independente ou aprovação ét
 
 ## Apresentação e edição
 
+Atribua cada fundamento no contexto com autores, ano, componente e DOI; indique também quando a observação decorre de convenção local. Confira a procedência das recomendações e a bibliografia completa das fontes usadas. Ausência de bibliografia é uma lacuna documental a corrigir, sem invalidar automaticamente decisões metodológicas. Em revisão sem edição, aponte a lacuna no chat e preserve o arquivo. Em edição autorizada, copie os metadados do catálogo e coloque a bibliografia antes da única legenda final, sem links da instalação.
+
+
 Para cada observação relevante, informe **localização**, **trecho ou informação
 observada**, **problema ou lacuna**, **fundamento**, **consequência** e
 **recomendação**. Use os IDs existentes; não duplique o plano em outra matriz.
@@ -75,3 +81,12 @@ um parecer como prova de validade científica, eficácia ou execução.
 Termine a revisão no chat com a legenda fixa definida na entrada da skill. Em
 revisão sem edição, deixe o plano intacto. Se uma edição for autorizada, termine
 o arquivo com uma única cópia da legenda.
+
+
+## Referências utilizadas
+
+- Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+- Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+
+- Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A Design Science Research Methodology for Information Systems Research. *Journal of Management Information Systems, 24*(3), 45–77. DOI: [10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302).

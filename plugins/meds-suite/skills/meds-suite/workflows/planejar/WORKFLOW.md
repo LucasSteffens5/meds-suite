@@ -15,6 +15,9 @@ leia primeiro o plano e recorde somente as decisões pertinentes ao próximo pas
 
 ## Condução
 
+Fundamento: Baskerville, Pries-Heje e Venable (2026), MEDS, DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280). Os quatro passos MEDS orientam objetivos, estratégia, propriedades e episódios. As seis etapas de conversa abaixo acrescentam contexto e consolidação como organização operacional da suíte. Para estratégia e trajetória, o fundamento é Venable, Pries-Heje e Baskerville (2016), FEDS, DOI [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
+
+
 1. **Contexto.** Identifique o problema e a finalidade do artefato; se é produto ou
    processo, técnico ou sociotécnico, crítico ou não crítico para segurança; o
    estágio do projeto; os destinatários da evidência; e os recursos, riscos e
@@ -79,6 +82,9 @@ correspondente; conservar palavras e números não garante preservar sentido.
 
 ## Eficiência e short-scoping
 
+Fundamento: Baskerville, Pries-Heje e Venable (2026), MEDS, DOI [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280), dimensionamento dos métodos e aproveitamento de sinergias. O registro dos cortes e da aceitação é uma convenção da suíte.
+
+
 Quando pertinente, proponha sinergias entre propriedades e episódios. Para reduzir
 o escopo de um método, explicite o escopo original, o corte proposto, sua justificativa,
 a economia esperada (qualitativa quando não houver estimativa), as consequências
@@ -86,6 +92,11 @@ para rigor/cobertura e os riscos residuais. Registre a escolha do pesquisador.
 Não presuma que menos esforço mantém automaticamente a força das conclusões.
 
 ## Saída
+
+Nas justificativas, atribua a cada seção conceitual os autores, ano, componente e DOI. Para estratégia, cite FEDS; para objetivos, MuSCoW, DSREMSF e short-scoping, cite MEDS. Se situar atividades DSRM, carregue a referência correspondente e inclua seu DOI e bibliografia.
+
+Copie do catálogo as referências completas efetivamente usadas para o plano, antes da única legenda final. Não use links da instalação. Um plano parcial também precisa explicitar a origem dos fundamentos já utilizados. Campos novos de referência não autorizam substituir escolhas aceitas.
+
 
 Salve o plano com as informações disponíveis; ele pode permanecer parcial.
 Na resposta, mostre o arquivo, o que foi planejado, o que continua proposto ou
@@ -95,3 +106,10 @@ Termine toda resposta deste fluxo com a legenda fixa definida na entrada da skil
 O modelo de plano contém a mesma legenda para arquivos novos; ao atualizar um
 plano, mantenha uma única cópia no fim. A legenda acompanha inclusive perguntas,
 planos parciais e avisos de que não foi possível salvar.
+
+
+## Referências utilizadas
+
+- Baskerville, R., Pries-Heje, J., & Venable, J. R. (2026). MEDS: Methodology for Evaluation in Design Science. *European Journal of Information Systems, 35*(5), 830–847. DOI: [10.1080/0960085X.2026.2627280](https://doi.org/10.1080/0960085X.2026.2627280).
+
+- Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: a Framework for Evaluation in Design Science Research. *European Journal of Information Systems, 25*(1), 77–89. DOI: [10.1057/ejis.2014.36](https://doi.org/10.1057/ejis.2014.36).
