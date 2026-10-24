@@ -1,0 +1,4 @@
+interface:
+  display_name: "MEDS Suite"
+  short_description: "Planeje ou revise um programa de avaliação MEDS"
+  default_prompt: "Use $meds-suite para planejar a avaliação do meu artefato. Vou descrever o caso e as informações disponíveis."

@@ -9,7 +9,8 @@ from urllib.parse import unquote, urlsplit
 
 
 PLUGIN = Path("plugins/meds-suite")
-SKILL = PLUGIN / "skills/meds-suite"
+SKILL = Path("skills/meds-suite")
+PACKAGE_SKILL = PLUGIN / "skills/meds-suite"
 LEGEND = (
     "**Legenda:** ID = identificador; O = objetivo da avaliação; P = propriedade do artefato; "
     "E = episódio de avaliação; S = cenário; D = documento. Os números identificam itens, "
@@ -98,11 +99,12 @@ def validate(root):
     skill_text = read(skill_path)
     frontmatter = re.match(r"\A---\r?\n(.*?)\r?\n---(?:\r?\n|$)", skill_text, re.DOTALL)
     header = frontmatter.group(1) if frontmatter else ""
-    if not frontmatter or not re.search(r"^name: meds-suite\s*$", header, re.MULTILINE):
-        error(skill_path, "frontmatter/name ausente ou inválido")
+    if (not frontmatter or not re.search(r"^name: meds-suite\s*$", header, re.MULTILINE)
+            or not re.search(r"^description:\s*\S.+$", header, re.MULTILINE)):
+        error(skill_path, "frontmatter/name/description ausente ou inválido")
     versions = re.findall(r'^  version: "(\d+\.\d+\.\d+)"\s*$', header, re.MULTILINE)
     readme = read(Path("README.md"))
-    readme_versions = re.findall(r"^Plugin `meds-suite` v(\d+\.\d+\.\d+)\b", readme, re.MULTILINE)
+    readme_versions = re.findall(r"^MEDS Suite (\d+\.\d+\.\d+) oferece\b", readme, re.MULTILINE)
     version = manifest.get("version")
     if (not isinstance(version, str) or not re.fullmatch(r"\d+\.\d+\.\d+", version)
             or versions != [version] or readme_versions != [version]):
@@ -111,14 +113,36 @@ def validate(root):
         error(skill_path, "deve conter uma única legenda fixa para as respostas da suíte")
     if re.search(r"tutorial|ensinar MEDS|exemplo simples", header, re.IGNORECASE):
         error(skill_path, "descrição da skill não deve promover um tutorial como modo de uso")
-    interface_path = SKILL / "agents/openai.yaml"
+    interface_path = PLUGIN / "agents/openai.yaml"
     interface = read(interface_path)
     if re.search(r"tutorial|ensinar MEDS|exemplo simples", interface, re.IGNORECASE):
         error(interface_path, "metadados de interface não devem promover um tutorial como modo de uso")
 
-    skills = sorted((root / "plugins").rglob("SKILL.md"))
-    if skills != [root / skill_path]:
-        error(PLUGIN, "deve existir somente a entrada skills/meds-suite/SKILL.md")
+    skills = sorted(path.relative_to(root).as_posix() for path in root.rglob("SKILL.md")
+                    if ".git" not in path.parts and "__pycache__" not in path.parts)
+    expected_skills = [(SKILL / "SKILL.md").as_posix(),
+                       (PACKAGE_SKILL / "SKILL.md").as_posix()]
+    if skills != sorted(expected_skills):
+        error(SKILL, "deve haver uma fonte comum e somente seu espelho no pacote Codex")
+
+    source_files = {
+        path.relative_to(root / SKILL).as_posix(): path.read_bytes()
+        for path in sorted((root / SKILL).rglob("*")) if path.is_file()
+    }
+    package_files = {
+        path.relative_to(root / PACKAGE_SKILL).as_posix(): path.read_bytes()
+        for path in sorted((root / PACKAGE_SKILL).rglob("*")) if path.is_file()
+        and path.relative_to(root / PACKAGE_SKILL).as_posix() != "agents/openai.yaml"
+    }
+    if source_files != package_files:
+        error(PACKAGE_SKILL, "espelho Codex diverge da fonte comum; execute scripts/sync_codex_package.py")
+    interface_source = root / interface_path
+    interface_package = root / PACKAGE_SKILL / "agents/openai.yaml"
+    if not interface_package.is_file() or (interface_source.is_file()
+                                           and interface_package.read_bytes() != interface_source.read_bytes()):
+        error(interface_package.relative_to(root), "metadados Codex ausentes ou divergentes da fonte do pacote")
+    if (root / SKILL / "agents/openai.yaml").exists():
+        error(SKILL, "metadados de interface devem existir somente no pacote Codex")
     tutorial_dir = root / SKILL / "workflows/tutorial"
     if tutorial_dir.exists():
         error(tutorial_dir.relative_to(root), "tutoriais devem permanecer fora do plugin instalado")
@@ -130,18 +154,21 @@ def validate(root):
     )
     for path in sorted((root / SKILL).rglob("*.md")):
         content = read(path.relative_to(root))
+        if re.search(r"codex|claude|antigravity|opencode|cursor|copilot", content, re.IGNORECASE):
+            error(path.relative_to(root), "a fonte comum não deve depender de um harness específico")
         for marker in tutorial_markers:
             if marker in content:
                 error(path.relative_to(root), "dados do tutorial não podem entrar no plugin instalado")
                 break
-    for required in ("agents/openai.yaml", "workflows/planejar/WORKFLOW.md",
+    for required in ("workflows/planejar/WORKFLOW.md",
                      "workflows/revisar/WORKFLOW.md", "references/meds.md",
                      "references/feds.md", "references/dsrm.md", "assets/plano-meds.md"):
         if not (root / SKILL / required).is_file():
             error(SKILL / required, "recurso obrigatório ausente")
 
     resources = [root / "README.md", root / "docs/primeiro-contato/README.md",
-                 *sorted((root / SKILL).rglob("*.md"))]
+                 *sorted((root / SKILL).rglob("*.md")),
+                 *sorted((root / PACKAGE_SKILL).rglob("*.md"))]
     for path in resources:
         relative = path.relative_to(root)
         for target in link_targets(read(relative)):
@@ -153,9 +180,11 @@ def validate(root):
             if (url.scheme and url.scheme != "file") or url.netloc or not url.path:
                 continue
             destination = (path.parent / unquote(url.path)).resolve()
-            if (relative.is_relative_to(PLUGIN)
-                    and not destination.is_relative_to((root / PLUGIN).resolve())):
-                error(relative, f"link local depende de arquivo fora do plugin instalado: {target}")
+            package_root = (root / (PACKAGE_SKILL if relative.is_relative_to(PACKAGE_SKILL)
+                                    else SKILL)).resolve()
+            if ((relative.is_relative_to(SKILL) or relative.is_relative_to(PACKAGE_SKILL))
+                    and not destination.is_relative_to(package_root)):
+                error(relative, f"link local depende de arquivo fora da skill instalada: {target}")
             if not destination.is_relative_to(root) or not destination.exists():
                 error(relative, f"link local ausente ou fora do pacote: {target}")
 

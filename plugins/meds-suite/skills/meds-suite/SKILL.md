@@ -2,7 +2,7 @@
 name: meds-suite
 description: Planeje, retome e revise programas de avaliação de artefatos DSR usando MEDS, FEDS, MuSCoW e DSREMSF. Execução de métodos e revisão editorial ficam fora deste fluxo.
 metadata:
-  version: "0.1.4"
+  version: "0.2.0"
 ---
 
 # MEDS Suite
@@ -30,7 +30,8 @@ identifique as referências do plugin por título e DOI, sem caminhos da instala
 Ao citar uma síntese ao pesquisador, informe seu título e tópico; não mostre
 caminhos ou links internos da instalação. Informe caminhos dos arquivos do projeto
 quando forem necessários para usar ou localizar uma entrega.
-O diretório `agents/` contém metadados de interface; esta versão usa um coordenador.
+Use uma única skill coordenadora; selecione o fluxo pelo pedido e carregue apenas os
+recursos necessários à etapa atual.
 
 Use como fatos do caso somente as informações fornecidas na conversa atual e no
 plano que a pessoa indicar. Não procure tutoriais, casos de teste, exemplos ou
