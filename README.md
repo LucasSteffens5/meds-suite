@@ -20,8 +20,9 @@ npx skills add LucasSteffens5/meds-suite --skill meds-suite \
 A instalação cria cópias nos diretórios de skill dos harnesses selecionados. Use
 `npx skills add <caminho-local-da-suite>` para testar uma cópia local. Para atualizar,
 repita o comando de instalação. Acrescente `-g` para instalação pessoal. O CLI mostra
-a seleção de harnesses disponíveis com `npx skills add --help`; a compatibilidade
-comportamental validada está registrada em [docs/compatibilidade.md](docs/compatibilidade.md).
+a seleção de harnesses disponíveis com `npx skills add --help`. Instalação no padrão
+Agent Skills não comprova o comportamento da suíte em cada harness; consulte o
+[escopo e a validação comportamental](tests/behavior/README.md#escopo-de-suporte).
 
 Se o Codex já usa o plugin local abaixo, remova `-a codex` do comando para evitar
 carregar duas cópias da mesma skill. A instalação pelo padrão também pode substituir

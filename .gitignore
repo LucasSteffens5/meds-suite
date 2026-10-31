@@ -7,5 +7,3 @@
 .DS_Store
 /casos/
 __pycache__/
-
-!/docs/compatibilidade.md
