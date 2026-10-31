@@ -16,11 +16,12 @@ Fontes metodológicas não estabelecem fatos ou decisões dos casos fictícios.
 
 ## Procedimento
 
-1. Preserve uma cópia da versão anterior antes de alterar suas instruções.
-2. Execute os mesmos cenários contra a cópia anterior e a versão atual, em novas
-   pastas externas ao checkout, usando o mesmo ambiente e modelo configurado.
-3. Cada execução abre uma sessão efêmera com uma cópia da skill e o plano necessário.
-   Somente a solicitação e os materiais do caso entram no contexto; os campos
+1. Registre a versão da skill, CLI `skills`, harness e modelo.
+2. Execute os mesmos cenários contra a versão anterior e a atual em pastas novas,
+   externas ao checkout, usando o mesmo harness, modelo e configuração.
+3. Cada execução abre uma sessão efêmera com uma cópia da Agent Skill no caminho
+   descoberto pelo harness e com o plano necessário. Somente a solicitação e os materiais
+   do caso entram no contexto; os campos
    `expected` e `human_reply` não são fornecidos ao modelo. Este protocolo verifica
    uma rodada de cada situação, não uma entrevista humana completa.
 4. Inspecione respostas e arquivos. Compare com os critérios de cada cenário e
@@ -31,19 +32,39 @@ Fontes metodológicas não estabelecem fatos ou decisões dos casos fictícios.
 5. Corrija problemas observados e repita os cenários afetados. Não apresente resultados
    anteriores como novas execuções nem resultados dos casos como validade científica.
 
+Execute a partir da raiz do checkout de manutenção. O executor usa até três sessões
+independentes simultâneas e não altera configurações dos harnesses. Os harnesses
+aceitos são `codex`, `claude-code`, `antigravity`, `opencode`, `cursor` e
+`github-copilot`. Cada um recebe uma cópia em seu diretório conhecido de Agent Skills;
+o recibo grava versão da suíte, harness, superfície, versão do CLI, modelo pedido e
+observado, sistema, arquivos e resposta. O campo `methodological_judgment` permanece
+`PENDING_HUMAN_REVIEW`.
+
+Rode cada harness em pasta de saída nova e fora do checkout. Comece com um cenário
+curto; depois execute a bateria completa e repita três vezes retomada, mudança de
+contexto e revisão sem edição:
+
 ```sh
-python3 scripts/run_behavior_checks.py --suite /tmp/copia-meds-anterior --output /tmp/meds-antes-novo
-python3 scripts/run_behavior_checks.py --output /tmp/meds-depois-novo
+python scripts/run_behavior_checks.py --harness codex --scenario sem-contexto --output /tmp/meds-codex
+python scripts/run_behavior_checks.py --harness claude-code --scenario sem-contexto --output /tmp/meds-claude
+python scripts/run_behavior_checks.py --harness antigravity --scenario sem-contexto --output /tmp/meds-antigravity
+python scripts/run_behavior_checks.py --harness opencode --scenario revisao-preservacao --output /tmp/meds-opencode
+python scripts/run_behavior_checks.py --harness cursor --scenario planejamento-parcial --output /tmp/meds-cursor
+python scripts/run_behavior_checks.py --harness github-copilot --scenario antigo-exportado --output /tmp/meds-copilot
 ```
 
-Execute os comandos a partir da raiz do checkout de manutenção. O executor usa até
-três sessões independentes simultâneas, sem alterar o modelo ou configurar agentes
-na suíte. Por padrão, copia os arquivos da skill para cada sessão. A opção
-`--installed-plugin` verifica a versão já instalada, chama `$meds-suite` em sessões
-novas e não instala nem altera a configuração do Codex. Ela requer que a versão
-instalada corresponda ao manifesto do checkout. Requer acesso ao serviço do Codex e
-permissão para iniciar o CLI; se uma sessão não iniciar, registre falha de execução,
-não aprovação do cenário.
+Use `--model <nome>` quando quiser fixar um modelo suportado pela CLI. A opção
+`--installed-plugin` é exclusiva do Codex: consulta o plugin habilitado, confirma que
+corresponde ao manifesto e o invoca em sessão nova; não instala nem altera a
+configuração. Se a CLI ou autenticação não estiver disponível, registre a execução
+como pendente, não aprovada.
+
+Para transferência entre harnesses, execute o cenário `transferencia` no harness
+de origem e passe o plano exportado ao harness de destino com `--plan-file`. O
+executor copia esse arquivo para a pasta isolada e grava hashes do plano de entrada
+e da saída; a revisão humana compara a resposta com o mesmo plano e verifica IDs,
+decisões aceitas, pendências, fontes e legenda. Execute uma rodada por harness de
+destino e mantenha os recibos de cada etapa.
 
 ## Casos e respostas humanas
 
