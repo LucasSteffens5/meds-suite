@@ -29,7 +29,6 @@ class PackageTests(unittest.TestCase):
         shutil.copy2(ROOT / "docs/primeiro-contato/README.md", tutorial_doc / "README.md")
         for filename in ("README.md", "LICENSE"):
             shutil.copy2(ROOT / filename, self.root / filename)
-        shutil.copy2(ROOT / "docs/compatibilidade.md", self.root / "docs/compatibilidade.md")
 
     def change_manifest(self, value, marketplace=False):
         path = (Path(".agents/plugins/marketplace.json") if marketplace

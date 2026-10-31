@@ -40,6 +40,28 @@ o recibo grava versão da suíte, harness, superfície, versão do CLI, modelo p
 observado, sistema, arquivos e resposta. O campo `methodological_judgment` permanece
 `PENDING_HUMAN_REVIEW`.
 
+## Escopo de suporte
+
+O plugin `meds-suite@meds-local` é a integração nativa do Codex; os demais harnesses
+usam o formato aberto Agent Skills. Ser um destino de instalação desse formato não
+comprova que a CLI, a descoberta da skill ou os fluxos funcionem no harness. O
+executor cobre estas superfícies, e cada uma exige execução e revisão próprias para
+ser declarada validada:
+
+| Harness | Identificador do executor | Estado comportamental da v0.2.0 |
+|---|---|---|
+| Codex CLI e plugin | `codex` | Pendente |
+| Claude Code CLI | `claude-code` | Pendente |
+| Antigravity CLI | `antigravity` | Pendente |
+| OpenCode CLI | `opencode` | Pendente |
+| Cursor CLI | `cursor` | Pendente |
+| GitHub Copilot CLI | `github-copilot` | Pendente |
+
+Plugins nativos de terceiros e integrações MCP específicas de fornecedores não são
+suportados nesta versão. Marque um harness como validado somente depois de executar
+os cenários aplicáveis, revisar as respostas e conferir os planos. Falhas de
+autenticação, resposta vazia ou execução indisponível permanecem pendentes.
+
 Rode cada harness em pasta de saída nova e fora do checkout. Comece com um cenário
 curto; depois execute a bateria completa e repita três vezes retomada, mudança de
 contexto e revisão sem edição:
